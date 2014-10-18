@@ -14,6 +14,7 @@
 		B2439C6919F29E0800D33D4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6819F29E0800D33D4C /* Images.xcassets */; };
 		B2439C6C19F29E0800D33D4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */; };
 		B2439C7819F29E0800D33D4C /* PositifityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C7719F29E0800D33D4C /* PositifityTests.swift */; };
+		B2439C9119F2ACCD00D33D4C /* MarkedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9019F2ACCD00D33D4C /* MarkedDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		B2439C7119F29E0800D33D4C /* PositifityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PositifityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2439C7619F29E0800D33D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2439C7719F29E0800D33D4C /* PositifityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositifityTests.swift; sourceTree = "<group>"; };
+		B2439C8719F2A5C400D33D4C /* Positifity-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Positifity-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2439C9019F2ACCD00D33D4C /* MarkedDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkedDate.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +85,11 @@
 				B2439C5E19F29E0800D33D4C /* AppDelegate.swift */,
 				B2439C6319F29E0800D33D4C /* ViewController.swift */,
 				B2439C6519F29E0800D33D4C /* Main.storyboard */,
+				B2439C8719F2A5C400D33D4C /* Positifity-Bridging-Header.h */,
 				B2439C6819F29E0800D33D4C /* Images.xcassets */,
 				B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */,
 				B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */,
+				B2439C9019F2ACCD00D33D4C /* MarkedDate.swift */,
 				B2439C5C19F29E0800D33D4C /* Supporting Files */,
 			);
 			path = Positifity;
@@ -218,6 +223,7 @@
 				B2439C6419F29E0800D33D4C /* ViewController.swift in Sources */,
 				B2439C5F19F29E0800D33D4C /* AppDelegate.swift in Sources */,
 				B2439C6219F29E0800D33D4C /* Positifity.xcdatamodeld in Sources */,
+				B2439C9119F2ACCD00D33D4C /* MarkedDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +346,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Positifity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Positifity/Positifity-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +360,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Positifity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Positifity/Positifity-Bridging-Header.h";
 			};
 			name = Release;
 		};
