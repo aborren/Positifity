@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2439C5F19F29E0800D33D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C5E19F29E0800D33D4C /* AppDelegate.swift */; };
+		B2439C6219F29E0800D33D4C /* Positifity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */; };
+		B2439C6419F29E0800D33D4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C6319F29E0800D33D4C /* ViewController.swift */; };
+		B2439C6719F29E0800D33D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6519F29E0800D33D4C /* Main.storyboard */; };
+		B2439C6919F29E0800D33D4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6819F29E0800D33D4C /* Images.xcassets */; };
+		B2439C6C19F29E0800D33D4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */; };
+		B2439C7819F29E0800D33D4C /* PositifityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C7719F29E0800D33D4C /* PositifityTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2439C7219F29E0800D33D4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2439C5119F29E0800D33D4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2439C5819F29E0800D33D4C;
+			remoteInfo = Positifity;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B2439C5919F29E0800D33D4C /* Positifity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Positifity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2439C5D19F29E0800D33D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2439C5E19F29E0800D33D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2439C6119F29E0800D33D4C /* Positifity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Positifity.xcdatamodel; sourceTree = "<group>"; };
+		B2439C6319F29E0800D33D4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2439C6619F29E0800D33D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2439C6819F29E0800D33D4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B2439C6B19F29E0800D33D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B2439C7119F29E0800D33D4C /* PositifityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PositifityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2439C7619F29E0800D33D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2439C7719F29E0800D33D4C /* PositifityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositifityTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2439C5619F29E0800D33D4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2439C6E19F29E0800D33D4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2439C5019F29E0800D33D4C = {
+			isa = PBXGroup;
+			children = (
+				B2439C5B19F29E0800D33D4C /* Positifity */,
+				B2439C7419F29E0800D33D4C /* PositifityTests */,
+				B2439C5A19F29E0800D33D4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2439C5A19F29E0800D33D4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2439C5919F29E0800D33D4C /* Positifity.app */,
+				B2439C7119F29E0800D33D4C /* PositifityTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2439C5B19F29E0800D33D4C /* Positifity */ = {
+			isa = PBXGroup;
+			children = (
+				B2439C5E19F29E0800D33D4C /* AppDelegate.swift */,
+				B2439C6319F29E0800D33D4C /* ViewController.swift */,
+				B2439C6519F29E0800D33D4C /* Main.storyboard */,
+				B2439C6819F29E0800D33D4C /* Images.xcassets */,
+				B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */,
+				B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */,
+				B2439C5C19F29E0800D33D4C /* Supporting Files */,
+			);
+			path = Positifity;
+			sourceTree = "<group>";
+		};
+		B2439C5C19F29E0800D33D4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2439C5D19F29E0800D33D4C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2439C7419F29E0800D33D4C /* PositifityTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2439C7719F29E0800D33D4C /* PositifityTests.swift */,
+				B2439C7519F29E0800D33D4C /* Supporting Files */,
+			);
+			path = PositifityTests;
+			sourceTree = "<group>";
+		};
+		B2439C7519F29E0800D33D4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2439C7619F29E0800D33D4C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2439C5819F29E0800D33D4C /* Positifity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2439C7B19F29E0800D33D4C /* Build configuration list for PBXNativeTarget "Positifity" */;
+			buildPhases = (
+				B2439C5519F29E0800D33D4C /* Sources */,
+				B2439C5619F29E0800D33D4C /* Frameworks */,
+				B2439C5719F29E0800D33D4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Positifity;
+			productName = Positifity;
+			productReference = B2439C5919F29E0800D33D4C /* Positifity.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2439C7019F29E0800D33D4C /* PositifityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2439C7E19F29E0800D33D4C /* Build configuration list for PBXNativeTarget "PositifityTests" */;
+			buildPhases = (
+				B2439C6D19F29E0800D33D4C /* Sources */,
+				B2439C6E19F29E0800D33D4C /* Frameworks */,
+				B2439C6F19F29E0800D33D4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2439C7319F29E0800D33D4C /* PBXTargetDependency */,
+			);
+			name = PositifityTests;
+			productName = PositifityTests;
+			productReference = B2439C7119F29E0800D33D4C /* PositifityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2439C5119F29E0800D33D4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = dna;
+				TargetAttributes = {
+					B2439C5819F29E0800D33D4C = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					B2439C7019F29E0800D33D4C = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = B2439C5819F29E0800D33D4C;
+					};
+				};
+			};
+			buildConfigurationList = B2439C5419F29E0800D33D4C /* Build configuration list for PBXProject "Positifity" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2439C5019F29E0800D33D4C;
+			productRefGroup = B2439C5A19F29E0800D33D4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2439C5819F29E0800D33D4C /* Positifity */,
+				B2439C7019F29E0800D33D4C /* PositifityTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2439C5719F29E0800D33D4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2439C6719F29E0800D33D4C /* Main.storyboard in Resources */,
+				B2439C6C19F29E0800D33D4C /* LaunchScreen.xib in Resources */,
+				B2439C6919F29E0800D33D4C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2439C6F19F29E0800D33D4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2439C5519F29E0800D33D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2439C6419F29E0800D33D4C /* ViewController.swift in Sources */,
+				B2439C5F19F29E0800D33D4C /* AppDelegate.swift in Sources */,
+				B2439C6219F29E0800D33D4C /* Positifity.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2439C6D19F29E0800D33D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2439C7819F29E0800D33D4C /* PositifityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2439C7319F29E0800D33D4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2439C5819F29E0800D33D4C /* Positifity */;
+			targetProxy = B2439C7219F29E0800D33D4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2439C6519F29E0800D33D4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2439C6619F29E0800D33D4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2439C6B19F29E0800D33D4C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2439C7919F29E0800D33D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B2439C7A19F29E0800D33D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2439C7C19F29E0800D33D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Positifity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B2439C7D19F29E0800D33D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Positifity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B2439C7F19F29E0800D33D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PositifityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Positifity.app/Positifity";
+			};
+			name = Debug;
+		};
+		B2439C8019F29E0800D33D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PositifityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Positifity.app/Positifity";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2439C5419F29E0800D33D4C /* Build configuration list for PBXProject "Positifity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2439C7919F29E0800D33D4C /* Debug */,
+				B2439C7A19F29E0800D33D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2439C7B19F29E0800D33D4C /* Build configuration list for PBXNativeTarget "Positifity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2439C7C19F29E0800D33D4C /* Debug */,
+				B2439C7D19F29E0800D33D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B2439C7E19F29E0800D33D4C /* Build configuration list for PBXNativeTarget "PositifityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2439C7F19F29E0800D33D4C /* Debug */,
+				B2439C8019F29E0800D33D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B2439C6119F29E0800D33D4C /* Positifity.xcdatamodel */,
+			);
+			currentVersion = B2439C6119F29E0800D33D4C /* Positifity.xcdatamodel */;
+			path = Positifity.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B2439C5119F29E0800D33D4C /* Project object */;
+}
