@@ -9,12 +9,29 @@
 /* Begin PBXBuildFile section */
 		B2439C5F19F29E0800D33D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C5E19F29E0800D33D4C /* AppDelegate.swift */; };
 		B2439C6219F29E0800D33D4C /* Positifity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */; };
-		B2439C6419F29E0800D33D4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C6319F29E0800D33D4C /* ViewController.swift */; };
+		B2439C6419F29E0800D33D4C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C6319F29E0800D33D4C /* CalendarViewController.swift */; };
 		B2439C6719F29E0800D33D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6519F29E0800D33D4C /* Main.storyboard */; };
 		B2439C6919F29E0800D33D4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6819F29E0800D33D4C /* Images.xcassets */; };
 		B2439C6C19F29E0800D33D4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */; };
 		B2439C7819F29E0800D33D4C /* PositifityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C7719F29E0800D33D4C /* PositifityTests.swift */; };
 		B2439C9119F2ACCD00D33D4C /* MarkedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9019F2ACCD00D33D4C /* MarkedDate.swift */; };
+		B2439C9519F2B8E600D33D4C /* CalendarUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9419F2B8E600D33D4C /* CalendarUtility.swift */; };
+		B2439CA119F2C0A600D33D4C /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9819F2C0A600D33D4C /* VRGCalendarView.m */; };
+		B2439CA219F2C0A600D33D4C /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9A19F2C0A600D33D4C /* UIView+convenience.m */; };
+		B2439CA319F2C0A600D33D4C /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9C19F2C0A600D33D4C /* NSMutableArray+convenience.m */; };
+		B2439CA419F2C0A600D33D4C /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9E19F2C0A600D33D4C /* NSDate+convenience.m */; };
+		B2439CA519F2C0A600D33D4C /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = B2439CA019F2C0A600D33D4C /* UIColor+expanded.m */; };
+		B2439CA719F2E3CA00D33D4C /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439CA619F2E3CA00D33D4C /* ProgressViewController.swift */; };
+		B2439CAD19F2E88D00D33D4C /* SAMultisectorControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B2439CAA19F2E88D00D33D4C /* SAMultisectorControl.m */; };
+		B2439CAE19F2E88D00D33D4C /* SAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B2439CAC19F2E88D00D33D4C /* SAMath.m */; };
+		B268583719F3E4AB006AEF8D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B268583619F3E4AB006AEF8D /* HealthKit.framework */; };
+		B2BF2A7919F6AD1B00D23D66 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2A7819F6AD1B00D23D66 /* SettingsViewController.swift */; };
+		B2BF2A7B19F6B2A400D23D66 /* UpdateWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */; };
+		B2C4848D19F556C700061FB8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4848C19F556C700061FB8 /* TabBarViewController.swift */; };
+		B2C4848F19F5588300061FB8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4848E19F5588300061FB8 /* StartViewController.swift */; };
+		B2C4849119F55D4800061FB8 /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2C4849019F55D4800061FB8 /* launch.jpg */; };
+		B2C4849319F562C500061FB8 /* StartGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4849219F562C500061FB8 /* StartGoalViewController.swift */; };
+		B2C4849519F5693700061FB8 /* StartEnterCurrentDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4849419F5693700061FB8 /* StartEnterCurrentDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +49,7 @@
 		B2439C5D19F29E0800D33D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2439C5E19F29E0800D33D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2439C6119F29E0800D33D4C /* Positifity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Positifity.xcdatamodel; sourceTree = "<group>"; };
-		B2439C6319F29E0800D33D4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2439C6319F29E0800D33D4C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		B2439C6619F29E0800D33D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2439C6819F29E0800D33D4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B2439C6B19F29E0800D33D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -41,6 +58,31 @@
 		B2439C7719F29E0800D33D4C /* PositifityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositifityTests.swift; sourceTree = "<group>"; };
 		B2439C8719F2A5C400D33D4C /* Positifity-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Positifity-Bridging-Header.h"; sourceTree = "<group>"; };
 		B2439C9019F2ACCD00D33D4C /* MarkedDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkedDate.swift; sourceTree = SOURCE_ROOT; };
+		B2439C9419F2B8E600D33D4C /* CalendarUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarUtility.swift; sourceTree = "<group>"; };
+		B2439C9719F2C0A600D33D4C /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
+		B2439C9819F2C0A600D33D4C /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
+		B2439C9919F2C0A600D33D4C /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+convenience.h"; sourceTree = "<group>"; };
+		B2439C9A19F2C0A600D33D4C /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convenience.m"; sourceTree = "<group>"; };
+		B2439C9B19F2C0A600D33D4C /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+convenience.h"; sourceTree = "<group>"; };
+		B2439C9C19F2C0A600D33D4C /* NSMutableArray+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+convenience.m"; sourceTree = "<group>"; };
+		B2439C9D19F2C0A600D33D4C /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
+		B2439C9E19F2C0A600D33D4C /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convenience.m"; sourceTree = "<group>"; };
+		B2439C9F19F2C0A600D33D4C /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		B2439CA019F2C0A600D33D4C /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
+		B2439CA619F2E3CA00D33D4C /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		B2439CA919F2E88D00D33D4C /* SAMultisectorControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMultisectorControl.h; sourceTree = "<group>"; };
+		B2439CAA19F2E88D00D33D4C /* SAMultisectorControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMultisectorControl.m; sourceTree = "<group>"; };
+		B2439CAB19F2E88D00D33D4C /* SAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMath.h; sourceTree = "<group>"; };
+		B2439CAC19F2E88D00D33D4C /* SAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMath.m; sourceTree = "<group>"; };
+		B268583519F3E4AB006AEF8D /* Positifity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Positifity.entitlements; sourceTree = "<group>"; };
+		B268583619F3E4AB006AEF8D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		B2BF2A7819F6AD1B00D23D66 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateWeightViewController.swift; sourceTree = "<group>"; };
+		B2C4848C19F556C700061FB8 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ../../beta5fixCoreData/TabBarViewController.swift; sourceTree = "<group>"; };
+		B2C4848E19F5588300061FB8 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		B2C4849019F55D4800061FB8 /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
+		B2C4849219F562C500061FB8 /* StartGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGoalViewController.swift; sourceTree = "<group>"; };
+		B2C4849419F5693700061FB8 /* StartEnterCurrentDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartEnterCurrentDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B268583719F3E4AB006AEF8D /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +107,7 @@
 		B2439C5019F29E0800D33D4C = {
 			isa = PBXGroup;
 			children = (
+				B268583619F3E4AB006AEF8D /* HealthKit.framework */,
 				B2439C5B19F29E0800D33D4C /* Positifity */,
 				B2439C7419F29E0800D33D4C /* PositifityTests */,
 				B2439C5A19F29E0800D33D4C /* Products */,
@@ -82,15 +126,20 @@
 		B2439C5B19F29E0800D33D4C /* Positifity */ = {
 			isa = PBXGroup;
 			children = (
+				B268583519F3E4AB006AEF8D /* Positifity.entitlements */,
+				B2439CA819F2E86700D33D4C /* circlecontrol */,
+				B2439C9619F2C09400D33D4C /* calendar */,
 				B2439C5E19F29E0800D33D4C /* AppDelegate.swift */,
-				B2439C6319F29E0800D33D4C /* ViewController.swift */,
+				B2439C9219F2B81600D33D4C /* ViewControllers */,
 				B2439C6519F29E0800D33D4C /* Main.storyboard */,
-				B2439C8719F2A5C400D33D4C /* Positifity-Bridging-Header.h */,
 				B2439C6819F29E0800D33D4C /* Images.xcassets */,
 				B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */,
+				B2C4849019F55D4800061FB8 /* launch.jpg */,
 				B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */,
 				B2439C9019F2ACCD00D33D4C /* MarkedDate.swift */,
 				B2439C5C19F29E0800D33D4C /* Supporting Files */,
+				B2439C8719F2A5C400D33D4C /* Positifity-Bridging-Header.h */,
+				B2439C9419F2B8E600D33D4C /* CalendarUtility.swift */,
 			);
 			path = Positifity;
 			sourceTree = "<group>";
@@ -118,6 +167,49 @@
 				B2439C7619F29E0800D33D4C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2439C9219F2B81600D33D4C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2439C6319F29E0800D33D4C /* CalendarViewController.swift */,
+				B2439CA619F2E3CA00D33D4C /* ProgressViewController.swift */,
+				B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */,
+				B2C4848C19F556C700061FB8 /* TabBarViewController.swift */,
+				B2BF2A7819F6AD1B00D23D66 /* SettingsViewController.swift */,
+				B2C4849419F5693700061FB8 /* StartEnterCurrentDataViewController.swift */,
+				B2C4849219F562C500061FB8 /* StartGoalViewController.swift */,
+				B2C4848E19F5588300061FB8 /* StartViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B2439C9619F2C09400D33D4C /* calendar */ = {
+			isa = PBXGroup;
+			children = (
+				B2439C9719F2C0A600D33D4C /* VRGCalendarView.h */,
+				B2439C9819F2C0A600D33D4C /* VRGCalendarView.m */,
+				B2439C9919F2C0A600D33D4C /* UIView+convenience.h */,
+				B2439C9A19F2C0A600D33D4C /* UIView+convenience.m */,
+				B2439C9B19F2C0A600D33D4C /* NSMutableArray+convenience.h */,
+				B2439C9C19F2C0A600D33D4C /* NSMutableArray+convenience.m */,
+				B2439C9D19F2C0A600D33D4C /* NSDate+convenience.h */,
+				B2439C9E19F2C0A600D33D4C /* NSDate+convenience.m */,
+				B2439C9F19F2C0A600D33D4C /* UIColor+expanded.h */,
+				B2439CA019F2C0A600D33D4C /* UIColor+expanded.m */,
+			);
+			name = calendar;
+			sourceTree = "<group>";
+		};
+		B2439CA819F2E86700D33D4C /* circlecontrol */ = {
+			isa = PBXGroup;
+			children = (
+				B2439CA919F2E88D00D33D4C /* SAMultisectorControl.h */,
+				B2439CAA19F2E88D00D33D4C /* SAMultisectorControl.m */,
+				B2439CAB19F2E88D00D33D4C /* SAMath.h */,
+				B2439CAC19F2E88D00D33D4C /* SAMath.m */,
+			);
+			name = circlecontrol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +261,12 @@
 				TargetAttributes = {
 					B2439C5819F29E0800D33D4C = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 7SX7NNMX7Q;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					B2439C7019F29E0800D33D4C = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -201,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2439C6719F29E0800D33D4C /* Main.storyboard in Resources */,
+				B2C4849119F55D4800061FB8 /* launch.jpg in Resources */,
 				B2439C6C19F29E0800D33D4C /* LaunchScreen.xib in Resources */,
 				B2439C6919F29E0800D33D4C /* Images.xcassets in Resources */,
 			);
@@ -220,10 +319,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2439C6419F29E0800D33D4C /* ViewController.swift in Sources */,
+				B2BF2A7B19F6B2A400D23D66 /* UpdateWeightViewController.swift in Sources */,
+				B2439CA519F2C0A600D33D4C /* UIColor+expanded.m in Sources */,
+				B2439CAD19F2E88D00D33D4C /* SAMultisectorControl.m in Sources */,
+				B2439CA119F2C0A600D33D4C /* VRGCalendarView.m in Sources */,
+				B2439CA319F2C0A600D33D4C /* NSMutableArray+convenience.m in Sources */,
+				B2C4848D19F556C700061FB8 /* TabBarViewController.swift in Sources */,
+				B2C4848F19F5588300061FB8 /* StartViewController.swift in Sources */,
+				B2439CAE19F2E88D00D33D4C /* SAMath.m in Sources */,
+				B2C4849519F5693700061FB8 /* StartEnterCurrentDataViewController.swift in Sources */,
+				B2439CA719F2E3CA00D33D4C /* ProgressViewController.swift in Sources */,
+				B2C4849319F562C500061FB8 /* StartGoalViewController.swift in Sources */,
+				B2439C6419F29E0800D33D4C /* CalendarViewController.swift in Sources */,
+				B2439C9519F2B8E600D33D4C /* CalendarUtility.swift in Sources */,
 				B2439C5F19F29E0800D33D4C /* AppDelegate.swift in Sources */,
 				B2439C6219F29E0800D33D4C /* Positifity.xcdatamodeld in Sources */,
+				B2439CA219F2C0A600D33D4C /* UIView+convenience.m in Sources */,
 				B2439C9119F2ACCD00D33D4C /* MarkedDate.swift in Sources */,
+				B2439CA419F2C0A600D33D4C /* NSDate+convenience.m in Sources */,
+				B2BF2A7919F6AD1B00D23D66 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,10 +461,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Positifity/Positifity.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Positifity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Positifity/Positifity-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -361,10 +479,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Positifity/Positifity.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Positifity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Positifity/Positifity-Bridging-Header.h";
 			};
 			name = Release;
@@ -422,6 +544,7 @@
 				B2439C7D19F29E0800D33D4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2439C7E19F29E0800D33D4C /* Build configuration list for PBXNativeTarget "PositifityTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +553,7 @@
 				B2439C8019F29E0800D33D4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

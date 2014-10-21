@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6D2C4F86-6B47-40D3-B5ED-1623A1817066</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Positifity</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7FA960D9E9495C52A2EFFD997A528D2441D581C6</key>
+		<string>https://github.com/aborren/Positifity.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Positifity.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7FA960D9E9495C52A2EFFD997A528D2441D581C6</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/aborren/Positifity.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7FA960D9E9495C52A2EFFD997A528D2441D581C6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7FA960D9E9495C52A2EFFD997A528D2441D581C6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Positifity</string>
+		</dict>
+	</array>
+</dict>
+</plist>
