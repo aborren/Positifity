@@ -20,7 +20,7 @@ class ProgressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCircle()
-       // loadWeight()
+        loadWeightText()
         // Do any additional setup after loading the view.
     }
 
@@ -34,16 +34,10 @@ class ProgressViewController: UIViewController {
         self.circle.userInteractionEnabled = false
         
         var sector : SAMultisectorSector = SAMultisectorSector(color: UIColor(hexString: "4ED2C5"), minValue: 0.0, maxValue: 100.0)
-        sector.endValue = 55.6
+        sector.endValue = 25.6
         sector.startValue = 0.0
-        
+
         self.circle.addSector(sector)
-        goalWeight.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description
-        if let wu = NSUserDefaults.standardUserDefaults().stringForKey("weightUnit") {
-            if let hu = NSUserDefaults.standardUserDefaults().stringForKey("heightUnit") {
-                currentWeight.text = NSUserDefaults.standardUserDefaults().doubleForKey("weight").description + wu + " " + NSUserDefaults.standardUserDefaults().doubleForKey("height").description + hu
-            }
-        }
         
     }
     
@@ -52,17 +46,21 @@ class ProgressViewController: UIViewController {
     }
     
     func updateDataView(){
-        
+        //TODO update sector
+        loadWeightText()
     }
 
+    func loadWeightText(){
+        goalWeight.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description
+        if let wu = NSUserDefaults.standardUserDefaults().stringForKey("weightUnit") {
+            if let hu = NSUserDefaults.standardUserDefaults().stringForKey("heightUnit") {
+                currentWeight.text = NSUserDefaults.standardUserDefaults().doubleForKey("weight").description + wu + " " + NSUserDefaults.standardUserDefaults().doubleForKey("height").description + hu
+            }
+        }
+    }
     
     @IBAction func unwindToSegue (segue : UIStoryboardSegue) {
-    
-        if(segue.identifier == "saveSettingSegue"){
-            //source är den jag kom ifrån! :D
-            println((segue.sourceViewController as SettingsViewController).test)
-        }
-        self.setupCircle()
+        self.updateDataView()
         println(segue.identifier)
     }
     

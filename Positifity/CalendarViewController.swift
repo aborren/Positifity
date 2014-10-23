@@ -30,6 +30,7 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
     
     //Button outlets
     
+    @IBOutlet var calView: VRGCalendarView!
     @IBOutlet var greenBtn: UIButton!
     @IBOutlet var yellowBtn: UIButton!
     @IBOutlet var redBtn: UIButton!
@@ -39,16 +40,23 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
         
         //calendar
         self.calendar.delegate = self
-        self.view.addSubview(self.calendar)
+        //self.view.addSubview(self.calendar)
+        self.calView.addSubview(calendar)
+        //calendarLayout()
         
         markCalendarWithCoreData()
         calendar.reloadInputViews()
-        
+        println(calendar.frame.height)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func calendarLayout(){
+        let xCenterConstraint = NSLayoutConstraint(item: self.calendar, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
+        
     }
 
     //Core data access + fill arrays for marking
