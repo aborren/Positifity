@@ -94,7 +94,7 @@ class StartEnterCurrentDataViewController: UIViewController {
         var result: Double? = nil
         let parsed = formatter.numberFromString(input)
         if let parsed = parsed {
-            result = parsed as Double
+            result = (parsed as Double)
         }
         return result
     }
@@ -103,10 +103,11 @@ class StartEnterCurrentDataViewController: UIViewController {
 
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject?) -> Bool {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let weight = numberString(weightTextView.text){
+            NSUserDefaults.standardUserDefaults().setDouble(weight, forKey: "startWeight")
             NSUserDefaults.standardUserDefaults().setDouble(weight, forKey: "weight")
             NSUserDefaults.standardUserDefaults().setValue(weightUnitSegmentedControl.titleForSegmentAtIndex(weightUnitSegmentedControl.selectedSegmentIndex), forKey: "weightUnit")
 

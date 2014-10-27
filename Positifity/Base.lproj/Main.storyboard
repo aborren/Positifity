@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5o3-lE-N61">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5o3-lE-N61">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -127,7 +127,7 @@
                         <viewControllerLayoutGuide type="bottom" id="3or-ks-C9l"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Exg-CV-tgV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eu6-tr-Bh1" customClass="SAMultisectorControl">
@@ -189,9 +189,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RBN-6d-cPm" kind="popoverPresentation" popoverAnchorView="cPg-Wb-e1X" id="MGz-AU-Jv1">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="RBN-6d-cPm" kind="show" id="aTJ-64-Gfw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq7-9J-hMC">
@@ -231,12 +229,12 @@
                                 <exclude reference="QRC-9b-gCp"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Jyu-6R-Pei"/>
+                                <exclude reference="v3i-TY-2Ru"/>
                                 <exclude reference="2WZ-Jh-GUw"/>
                                 <exclude reference="8GP-mh-beQ"/>
                                 <exclude reference="O7e-Cw-fce"/>
                                 <exclude reference="PNy-GU-ipn"/>
-                                <exclude reference="Jyu-6R-Pei"/>
-                                <exclude reference="v3i-TY-2Ru"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -247,12 +245,12 @@
                                 <include reference="QRC-9b-gCp"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Jyu-6R-Pei"/>
+                                <include reference="v3i-TY-2Ru"/>
                                 <include reference="2WZ-Jh-GUw"/>
                                 <include reference="8GP-mh-beQ"/>
                                 <include reference="O7e-Cw-fce"/>
                                 <include reference="PNy-GU-ipn"/>
-                                <include reference="Jyu-6R-Pei"/>
-                                <include reference="v3i-TY-2Ru"/>
                             </mask>
                         </variation>
                     </view>
@@ -266,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEq-Ho-zSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294.5" y="651"/>
+            <point key="canvasLocation" x="1132.5" y="650"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="OGr-UV-s1T">
@@ -277,7 +275,7 @@
                         <viewControllerLayoutGuide type="bottom" id="VIp-ow-T7A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Jn9-du-Igf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR3-fE-5fG">
@@ -401,7 +399,7 @@
                                     <rect key="frame" x="60" y="43" width="72" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="BeP-QL-qGF" kind="unwind" identifier="cancelWeightUpdate" unwindAction="unwindToSegue:" id="rvF-Ro-Onu"/>
+                                    <segue destination="BeP-QL-qGF" kind="unwind" identifier="cancelWeightUpdate" unwindAction="unwindToSegue:" id="Ke4-lw-gq0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykz-U3-gPd">
@@ -413,7 +411,7 @@
                                     <rect key="frame" x="157" y="163" width="46" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="BeP-QL-qGF" kind="unwind" identifier="saveWeightUpdate" unwindAction="unwindToSegue:" id="9U6-U2-Q7c"/>
+                                    <segue destination="BeP-QL-qGF" kind="unwind" identifier="saveWeightUpdate" unwindAction="unwindToSegue:" id="r2N-kr-f34"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iyX-bf-bNB">
@@ -448,7 +446,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBP-TI-zLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BeP-QL-qGF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1851" y="1317"/>
+            <point key="canvasLocation" x="1434" y="1331"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="aux-oy-VVY">

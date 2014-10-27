@@ -7,6 +7,7 @@
 //
 
 #import "SAMultisectorControl.h"
+#import "math.h"
 
 #define saCircleLineWidth 10.0
 #define saMarkersLineWidth 2.0
@@ -295,9 +296,9 @@ typedef struct{
     CGContextStrokePath(context);
     
     //text on markers
-    NSString *markerStrTemplate = [@"%.0f" stringByReplacingOccurrencesOfString:@"0" withString:[NSString stringWithFormat:@"%i", self.numbersAfterPoint]];
-    NSString *startMarkerStr = [NSString stringWithFormat:markerStrTemplate, sector.startValue];
-    NSString *endMarkerStr = [NSString stringWithFormat:markerStrTemplate, sector.endValue];
+    NSString *markerStrTemplate = [@"%.0f" stringByReplacingOccurrencesOfString:@"0" withString:[NSString stringWithFormat:@"%lu", (unsigned long)self.numbersAfterPoint]];
+    NSString *startMarkerStr = 	[NSString stringWithFormat:markerStrTemplate, fabs(sector.startValue)];
+    NSString *endMarkerStr = [NSString stringWithFormat:markerStrTemplate, fabs(sector.endValue)];
     
     //drawing start marker's text
     [self drawString:startMarkerStr

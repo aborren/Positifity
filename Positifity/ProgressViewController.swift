@@ -15,6 +15,7 @@ class ProgressViewController: UIViewController {
     @IBOutlet var goalWeight: UILabel!
     @IBOutlet var circle: SAMultisectorControl!
     
+    var weightLoss: Bool = true
     
     
     override func viewDidLoad() {
@@ -30,12 +31,28 @@ class ProgressViewController: UIViewController {
     }
     
     func setupCircle(){
+        self.circle.removeAllSectors()
+        let startWeight = NSUserDefaults.standardUserDefaults().doubleForKey("startWeight")
+        let goalWeight = NSUserDefaults.standardUserDefaults().doubleForKey("goal")
+        let currentWeight = NSUserDefaults.standardUserDefaults().doubleForKey("weight")
+        
+        //if losing weight or gaining
+        weightLoss = (startWeight - goalWeight > 0)
         self.circle.addTarget(self, action: "multisectorValueChanged", forControlEvents: UIControlEvents.ValueChanged)
         self.circle.userInteractionEnabled = false
         
-        var sector : SAMultisectorSector = SAMultisectorSector(color: UIColor(hexString: "4ED2C5"), minValue: 0.0, maxValue: 100.0)
-        sector.endValue = 25.6
-        sector.startValue = 0.0
+        var sector : SAMultisectorSector
+        if(weightLoss){
+            sector = SAMultisectorSector(color: UIColor(hexString: "4ED2C5"), minValue: -startWeight, maxValue: -goalWeight)
+            //ifsats kolla current mot goal/start
+            sector.endValue = -currentWeight + 0.01  //fulhack för sector..
+            sector.startValue = -startWeight
+        }else{
+            sector = SAMultisectorSector(color: UIColor(hexString: "4ED2C5"), minValue: startWeight, maxValue: goalWeight)
+            //ifsats kolla current mot goal/start
+            sector.endValue = currentWeight + 0.01 //fulhack för sector..
+            sector.startValue = startWeight
+        }
 
         self.circle.addSector(sector)
         
@@ -46,8 +63,7 @@ class ProgressViewController: UIViewController {
     }
     
     func updateDataView(){
-        //TODO update sector
-        loadWeightText()
+        
     }
 
     func loadWeightText(){
@@ -60,7 +76,7 @@ class ProgressViewController: UIViewController {
     }
     
     @IBAction func unwindToSegue (segue : UIStoryboardSegue) {
-        self.updateDataView()
+        self.setupCircle()
         println(segue.identifier)
     }
     
