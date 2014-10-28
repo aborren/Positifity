@@ -84,10 +84,8 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
                 }
                 markedDays.append(day)
                 markedColors.append(color)
-                println(day)
             }
         }
-                println()
     }
     
     func deleteEntriesAtDay(day: Int){
@@ -109,7 +107,7 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
     
     //Calendar delegate functions
     func calendarView(calendarView: VRGCalendarView!, dateSelected date: NSDate!) {
-        if(greenBtn.selected){
+        /*if(greenBtn.selected){
             if(dayIsMarked(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: date))){
                 deleteEntriesAtDay(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: date))
             }
@@ -125,8 +123,17 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
             }
             let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: date, markedAs: "red")
         }else{
-        }
+        }*/
         
+        greenBtn.selected = false
+        yellowBtn.selected = false
+        redBtn.selected = false
+        
+        let day = NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: date)
+        
+        if(dayIsMarked(day)){
+            selectButtonFromMarkedDate(day)
+        }
         markCalendarWithCoreData()
         calendar.reloadInputViews()
     }
@@ -152,6 +159,20 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
         return false
     }
     
+    func selectButtonFromMarkedDate(day: Int){
+        for (var i = 0; i < markedDays.count; ++i) {
+            if(markedDays[i] == day){
+                if(markedColors[i] == UIColor.greenColor()){
+                    greenBtn.selected = true
+                }else if(markedColors[i] == UIColor.yellowColor()){
+                    yellowBtn.selected = true
+                }else{
+                    redBtn.selected = true
+                }
+            }
+        }
+    }
+    
     //Button functions
     @IBAction func greenBtnPressed(sender: AnyObject) {
         greenBtn.selected = !greenBtn.selected
@@ -162,7 +183,9 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
             if(dayIsMarked(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))){
                 deleteEntriesAtDay(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))
             }
-            let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "green")
+            if(greenBtn.selected){
+                let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "green")
+            }
             markCalendarWithCoreData()
             calendar.reloadInputViews()
         }
@@ -176,7 +199,9 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
             if(dayIsMarked(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))){
                 deleteEntriesAtDay(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))
             }
-            let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "yellow")
+            if(yellowBtn.selected){
+                let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "yellow")
+            }
             markCalendarWithCoreData()
             calendar.reloadInputViews()
         }
@@ -190,7 +215,9 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
             if(dayIsMarked(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))){
                 deleteEntriesAtDay(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))
             }
-            let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "red")
+            if(redBtn.selected){
+                let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "red")
+            }
             markCalendarWithCoreData()
             calendar.reloadInputViews()
         }

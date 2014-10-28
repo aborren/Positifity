@@ -17,11 +17,11 @@ class ProgressViewController: UIViewController {
     
     var weightLoss: Bool = true
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCircle()
         loadWeightText()
+
         // Do any additional setup after loading the view.
     }
 
@@ -31,10 +31,12 @@ class ProgressViewController: UIViewController {
     }
     
     func setupCircle(){
+        //nollställ
         self.circle.removeAllSectors()
-        let startWeight = NSUserDefaults.standardUserDefaults().doubleForKey("startWeight")
-        let goalWeight = NSUserDefaults.standardUserDefaults().doubleForKey("goal")
-        let currentWeight = NSUserDefaults.standardUserDefaults().doubleForKey("weight")
+        
+        var startWeight = NSUserDefaults.standardUserDefaults().doubleForKey("startWeight")
+        var goalWeight = NSUserDefaults.standardUserDefaults().doubleForKey("goal")
+        var currentWeight = NSUserDefaults.standardUserDefaults().doubleForKey("weight")
         
         //if losing weight or gaining
         weightLoss = (startWeight - goalWeight > 0)
@@ -43,14 +45,18 @@ class ProgressViewController: UIViewController {
         
         var sector : SAMultisectorSector
         if(weightLoss){
+            if(startWeight <= currentWeight){
+                startWeight = currentWeight + 0.01  //fulhack för sector..
+            }
             sector = SAMultisectorSector(color: UIColor(hexString: "4ED2C5"), minValue: -startWeight, maxValue: -goalWeight)
-            //ifsats kolla current mot goal/start
-            sector.endValue = -currentWeight + 0.01  //fulhack för sector..
+            sector.endValue = -currentWeight
             sector.startValue = -startWeight
         }else{
+            if(startWeight >= currentWeight){
+                startWeight = currentWeight + 0.01 //fulhack för sector..
+            }
             sector = SAMultisectorSector(color: UIColor(hexString: "4ED2C5"), minValue: startWeight, maxValue: goalWeight)
-            //ifsats kolla current mot goal/start
-            sector.endValue = currentWeight + 0.01 //fulhack för sector..
+            sector.endValue = currentWeight
             sector.startValue = startWeight
         }
 
@@ -77,6 +83,7 @@ class ProgressViewController: UIViewController {
     
     @IBAction func unwindToSegue (segue : UIStoryboardSegue) {
         self.setupCircle()
+        loadWeightText()
         println(segue.identifier)
     }
     

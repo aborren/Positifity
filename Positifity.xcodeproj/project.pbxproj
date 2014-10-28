@@ -32,6 +32,10 @@
 		B2C4849119F55D4800061FB8 /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2C4849019F55D4800061FB8 /* launch.jpg */; };
 		B2C4849319F562C500061FB8 /* StartGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4849219F562C500061FB8 /* StartGoalViewController.swift */; };
 		B2C4849519F5693700061FB8 /* StartEnterCurrentDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4849419F5693700061FB8 /* StartEnterCurrentDataViewController.swift */; };
+		B2C6C09A19FFE3E000A336D0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C6C09919FFE3E000A336D0 /* NotificationCenter.framework */; };
+		B2C6C09F19FFE3E000A336D0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6C09E19FFE3E000A336D0 /* TodayViewController.swift */; };
+		B2C6C0A119FFE3E000A336D0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C6C0A019FFE3E000A336D0 /* MainInterface.storyboard */; };
+		B2C6C0A419FFE3E000A336D0 /* PositifityWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B2C6C09719FFE3E000A336D0 /* PositifityWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +46,28 @@
 			remoteGlobalIDString = B2439C5819F29E0800D33D4C;
 			remoteInfo = Positifity;
 		};
+		B2C6C0A219FFE3E000A336D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2439C5119F29E0800D33D4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2C6C09619FFE3E000A336D0;
+			remoteInfo = PositifityWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2C6C0A819FFE3E000A336D0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B2C6C0A419FFE3E000A336D0 /* PositifityWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B2439C5919F29E0800D33D4C /* Positifity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Positifity.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +108,12 @@
 		B2C4849019F55D4800061FB8 /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
 		B2C4849219F562C500061FB8 /* StartGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGoalViewController.swift; sourceTree = "<group>"; };
 		B2C4849419F5693700061FB8 /* StartEnterCurrentDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartEnterCurrentDataViewController.swift; sourceTree = "<group>"; };
+		B2C6C09719FFE3E000A336D0 /* PositifityWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PositifityWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C6C09919FFE3E000A336D0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		B2C6C09D19FFE3E000A336D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2C6C09E19FFE3E000A336D0 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		B2C6C0A019FFE3E000A336D0 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		B2C6C0A919FFE5A100A336D0 /* PositifityWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PositifityWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +132,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2C6C09419FFE3E000A336D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C6C09A19FFE3E000A336D0 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,6 +149,8 @@
 				B268583619F3E4AB006AEF8D /* HealthKit.framework */,
 				B2439C5B19F29E0800D33D4C /* Positifity */,
 				B2439C7419F29E0800D33D4C /* PositifityTests */,
+				B2C6C09B19FFE3E000A336D0 /* PositifityWidget */,
+				B2C6C09819FFE3E000A336D0 /* Frameworks */,
 				B2439C5A19F29E0800D33D4C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +160,7 @@
 			children = (
 				B2439C5919F29E0800D33D4C /* Positifity.app */,
 				B2439C7119F29E0800D33D4C /* PositifityTests.xctest */,
+				B2C6C09719FFE3E000A336D0 /* PositifityWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +254,33 @@
 			name = circlecontrol;
 			sourceTree = "<group>";
 		};
+		B2C6C09819FFE3E000A336D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2C6C09919FFE3E000A336D0 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2C6C09B19FFE3E000A336D0 /* PositifityWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B2C6C0A919FFE5A100A336D0 /* PositifityWidget.entitlements */,
+				B2C6C09E19FFE3E000A336D0 /* TodayViewController.swift */,
+				B2C6C0A019FFE3E000A336D0 /* MainInterface.storyboard */,
+				B2C6C09C19FFE3E000A336D0 /* Supporting Files */,
+			);
+			path = PositifityWidget;
+			sourceTree = "<group>";
+		};
+		B2C6C09C19FFE3E000A336D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2C6C09D19FFE3E000A336D0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,10 +291,12 @@
 				B2439C5519F29E0800D33D4C /* Sources */,
 				B2439C5619F29E0800D33D4C /* Frameworks */,
 				B2439C5719F29E0800D33D4C /* Resources */,
+				B2C6C0A819FFE3E000A336D0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B2C6C0A319FFE3E000A336D0 /* PBXTargetDependency */,
 			);
 			name = Positifity;
 			productName = Positifity;
@@ -250,6 +321,23 @@
 			productReference = B2439C7119F29E0800D33D4C /* PositifityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B2C6C09619FFE3E000A336D0 /* PositifityWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2C6C0A719FFE3E000A336D0 /* Build configuration list for PBXNativeTarget "PositifityWidget" */;
+			buildPhases = (
+				B2C6C09319FFE3E000A336D0 /* Sources */,
+				B2C6C09419FFE3E000A336D0 /* Frameworks */,
+				B2C6C09519FFE3E000A336D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PositifityWidget;
+			productName = PositifityWidget;
+			productReference = B2C6C09719FFE3E000A336D0 /* PositifityWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -263,6 +351,9 @@
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = 7SX7NNMX7Q;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
@@ -271,6 +362,15 @@
 					B2439C7019F29E0800D33D4C = {
 						CreatedOnToolsVersion = 6.0.1;
 						TestTargetID = B2439C5819F29E0800D33D4C;
+					};
+					B2C6C09619FFE3E000A336D0 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 7SX7NNMX7Q;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -289,6 +389,7 @@
 			targets = (
 				B2439C5819F29E0800D33D4C /* Positifity */,
 				B2439C7019F29E0800D33D4C /* PositifityTests */,
+				B2C6C09619FFE3E000A336D0 /* PositifityWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -309,6 +410,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C6C09519FFE3E000A336D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C6C0A119FFE3E000A336D0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +458,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2C6C09319FFE3E000A336D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C6C09F19FFE3E000A336D0 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -356,6 +473,11 @@
 			isa = PBXTargetDependency;
 			target = B2439C5819F29E0800D33D4C /* Positifity */;
 			targetProxy = B2439C7219F29E0800D33D4C /* PBXContainerItemProxy */;
+		};
+		B2C6C0A319FFE3E000A336D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2C6C09619FFE3E000A336D0 /* PositifityWidget */;
+			targetProxy = B2C6C0A219FFE3E000A336D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -527,6 +649,40 @@
 			};
 			name = Release;
 		};
+		B2C6C0A519FFE3E000A336D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PositifityWidget/PositifityWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PositifityWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B2C6C0A619FFE3E000A336D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PositifityWidget/PositifityWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = PositifityWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -556,6 +712,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B2C6C0A719FFE3E000A336D0 /* Build configuration list for PBXNativeTarget "PositifityWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C6C0A519FFE3E000A336D0 /* Debug */,
+				B2C6C0A619FFE3E000A336D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

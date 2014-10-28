@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>PositifityWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>B2439C7019F29E0800D33D4C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B2C6C09619FFE3E000A336D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

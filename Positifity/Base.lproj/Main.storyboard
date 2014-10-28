@@ -18,43 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHX-FY-NxY">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Green">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Green"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="342" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="greenBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1jj-Fz-hOy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcv-DS-6QH">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Yellow">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="153" y="342" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="yellowBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L3j-dW-HsE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOT-AX-edV">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Red">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="244" y="342" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="redBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Joh-eh-ZKV"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQK-XT-sQg" customClass="VRGCalendarView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.0" green="0.74117647060000003" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,34 +38,80 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHX-FY-NxY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Green">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="Green"/>
+                                <connections>
+                                    <action selector="greenBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1jj-Fz-hOy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcv-DS-6QH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Yellow">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="yellowBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L3j-dW-HsE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOT-AX-edV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Red">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="redBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Joh-eh-ZKV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hcv-DS-6QH" secondAttribute="centerX" constant="2" id="6Kf-0d-F20"/>
+                            <constraint firstItem="hOT-AX-edV" firstAttribute="top" secondItem="nQK-XT-sQg" secondAttribute="bottom" constant="8" id="9ci-J1-p4m"/>
+                            <constraint firstItem="hOT-AX-edV" firstAttribute="leading" secondItem="hcv-DS-6QH" secondAttribute="trailing" constant="45" id="HoZ-oh-NjW"/>
+                            <constraint firstItem="hcv-DS-6QH" firstAttribute="top" secondItem="nQK-XT-sQg" secondAttribute="bottom" constant="8" id="Nsn-Uq-VR9"/>
                             <constraint firstAttribute="centerX" secondItem="nQK-XT-sQg" secondAttribute="centerX" id="P0y-CY-VGz"/>
+                            <constraint firstItem="hcv-DS-6QH" firstAttribute="leading" secondItem="dHX-FY-NxY" secondAttribute="trailing" constant="41" id="VU7-6r-vsS"/>
+                            <constraint firstItem="dHX-FY-NxY" firstAttribute="top" secondItem="nQK-XT-sQg" secondAttribute="bottom" constant="8" id="coq-MI-6cL"/>
                             <constraint firstAttribute="centerY" secondItem="nQK-XT-sQg" secondAttribute="centerY" constant="50" id="nww-6j-Wz5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="nQK-XT-sQg"/>
                                 <exclude reference="dHX-FY-NxY"/>
                                 <exclude reference="hcv-DS-6QH"/>
                                 <exclude reference="hOT-AX-edV"/>
-                                <exclude reference="nQK-XT-sQg"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="P0y-CY-VGz"/>
                                 <exclude reference="nww-6j-Wz5"/>
+                                <exclude reference="coq-MI-6cL"/>
+                                <exclude reference="6Kf-0d-F20"/>
+                                <exclude reference="Nsn-Uq-VR9"/>
+                                <exclude reference="VU7-6r-vsS"/>
+                                <exclude reference="9ci-J1-p4m"/>
+                                <exclude reference="HoZ-oh-NjW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="nQK-XT-sQg"/>
                                 <include reference="dHX-FY-NxY"/>
                                 <include reference="hcv-DS-6QH"/>
                                 <include reference="hOT-AX-edV"/>
-                                <include reference="nQK-XT-sQg"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="P0y-CY-VGz"/>
                                 <include reference="nww-6j-Wz5"/>
+                                <include reference="coq-MI-6cL"/>
+                                <include reference="6Kf-0d-F20"/>
+                                <include reference="Nsn-Uq-VR9"/>
+                                <include reference="VU7-6r-vsS"/>
+                                <include reference="9ci-J1-p4m"/>
+                                <include reference="HoZ-oh-NjW"/>
                             </mask>
                         </variation>
                     </view>
@@ -136,10 +145,10 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3Q-xX-wVa">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="7NP-p2-cpY"/>
+                                            <constraint firstAttribute="height" constant="44" id="7NP-p2-cpY"/>
                                             <constraint firstAttribute="width" constant="262" id="XIf-OU-LiF"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                         <color key="textColor" red="0.0" green="0.74117647058823533" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -192,15 +201,6 @@
                                     <segue destination="RBN-6d-cPm" kind="show" id="aTJ-64-Gfw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq7-9J-hMC">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="463" width="314" height="21"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRC-9b-gCp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Setting"/>
@@ -211,6 +211,15 @@
                                     <segue destination="lnD-uZ-uzV" kind="show" id="Rzk-zz-Prz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq7-9J-hMC">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="438" width="314" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -225,32 +234,32 @@
                             <mask key="subviews">
                                 <exclude reference="eu6-tr-Bh1"/>
                                 <exclude reference="cPg-Wb-e1X"/>
-                                <exclude reference="hq7-9J-hMC"/>
                                 <exclude reference="QRC-9b-gCp"/>
+                                <exclude reference="hq7-9J-hMC"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Jyu-6R-Pei"/>
-                                <exclude reference="v3i-TY-2Ru"/>
                                 <exclude reference="2WZ-Jh-GUw"/>
                                 <exclude reference="8GP-mh-beQ"/>
                                 <exclude reference="O7e-Cw-fce"/>
                                 <exclude reference="PNy-GU-ipn"/>
+                                <exclude reference="Jyu-6R-Pei"/>
+                                <exclude reference="v3i-TY-2Ru"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="eu6-tr-Bh1"/>
                                 <include reference="cPg-Wb-e1X"/>
-                                <include reference="hq7-9J-hMC"/>
                                 <include reference="QRC-9b-gCp"/>
+                                <include reference="hq7-9J-hMC"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Jyu-6R-Pei"/>
-                                <include reference="v3i-TY-2Ru"/>
                                 <include reference="2WZ-Jh-GUw"/>
                                 <include reference="8GP-mh-beQ"/>
                                 <include reference="O7e-Cw-fce"/>
                                 <include reference="PNy-GU-ipn"/>
+                                <include reference="Jyu-6R-Pei"/>
+                                <include reference="v3i-TY-2Ru"/>
                             </mask>
                         </variation>
                     </view>
@@ -388,6 +397,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pXa-jP-WM6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JWf-y8-vl7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dki-qY-nm4">
