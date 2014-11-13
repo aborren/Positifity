@@ -11,11 +11,8 @@ import NotificationCenter
 import CoreData
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
-    @IBOutlet var TestLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        TestLabel.text = NSUserDefaults(suiteName: "group.dna.positifity")?.doubleForKey("test").description
         // Do any additional setup after loading the view from its nib.
     }
     
@@ -38,10 +35,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         /*var d = NSUserDefaults(suiteName: "group.dna.positifity")?.doubleForKey("test")
         NSUserDefaults(suiteName: "group.dna.positifity")?.setDouble(d!+1.0, forKey: "test")
         TestLabel.text = NSUserDefaults(suiteName: "group.dna.positifity")?.doubleForKey("test").description*/
-        //let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: NSDate(), markedAs: "green")
+        let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: NSDate(), markedAs: "green")
         println("hej")
         fetchMarkedDaysForCurrentYearMonth()
         
+        self.saveContext()
         
     }
     

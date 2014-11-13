@@ -13,35 +13,45 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cix-Uh-cMD">
-                                <rect key="frame" x="244" y="8" width="60" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGq-dc-wPk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbE-s2-o82">
+                                        <rect key="frame" x="146" y="79" width="50" height="50"/>
+                                        <state key="normal" image="dot_green.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="test:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="oYU-By-rf3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mih-Mk-5hL">
+                                        <rect key="frame" x="204" y="79" width="50" height="50"/>
+                                        <state key="normal" image="dot_yellow.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwA-YK-51Z">
+                                        <rect key="frame" x="262" y="79" width="50" height="50"/>
+                                        <state key="normal" image="dot_red.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.74117647060000003" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="KIk-5I-PJV"/>
-                                    <constraint firstAttribute="height" constant="21" id="mP7-Wl-VS7"/>
+                                    <constraint firstAttribute="height" constant="137" id="ulw-to-ZKT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.52375114050000005" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbE-s2-o82">
-                                <rect key="frame" x="158" y="0.0" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="test:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="oYU-By-rf3"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="cix-Uh-cMD" secondAttribute="bottom" constant="8" id="25X-Ef-ulF"/>
-                            <constraint firstItem="cix-Uh-cMD" firstAttribute="leading" secondItem="LbE-s2-o82" secondAttribute="trailing" constant="40" id="8kE-gY-iIn"/>
-                            <constraint firstAttribute="trailing" secondItem="cix-Uh-cMD" secondAttribute="trailing" constant="16" id="PQf-5O-LQX"/>
-                            <constraint firstItem="cix-Uh-cMD" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="WUX-yL-w30"/>
-                            <constraint firstItem="LbE-s2-o82" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Wqc-fj-WS5"/>
+                            <constraint firstItem="KGq-dc-wPk" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="1k8-lZ-Cvz"/>
+                            <constraint firstItem="KGq-dc-wPk" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="DJI-7S-ydi"/>
+                            <constraint firstAttribute="trailing" secondItem="KGq-dc-wPk" secondAttribute="trailing" id="b6u-Uu-ihn"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="KGq-dc-wPk" secondAttribute="bottom" id="yqh-Fu-xDn"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -49,16 +59,18 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="37"/>
-                    <connections>
-                        <outlet property="TestLabel" destination="cix-Uh-cMD" id="NlT-dp-DX9"/>
-                    </connections>
+                    <size key="freeformSize" width="320" height="137"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="285"/>
+            <point key="canvasLocation" x="516" y="284.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dot_green.png" width="49" height="49"/>
+        <image name="dot_red.png" width="49" height="49"/>
+        <image name="dot_yellow.png" width="49" height="49"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
