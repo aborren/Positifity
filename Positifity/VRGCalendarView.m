@@ -460,7 +460,7 @@
         if (selectedDate && i==selectedDateBlock) {
             CGRect rectangleGrid = CGRectMake(targetX,targetY,kVRGCalendarViewDayWidth+2,kVRGCalendarViewDayHeight+2);
             CGContextAddRect(context, rectangleGrid);
-            CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"6fe7df"].CGColor);
+            CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"89d3e8"].CGColor);
             CGContextFillPath(context);
             
             CGContextSetFillColorWithColor(context, 
@@ -468,7 +468,7 @@
         } else if (todayBlock==i) {
             CGRect rectangleGrid = CGRectMake(targetX,targetY,kVRGCalendarViewDayWidth+2,kVRGCalendarViewDayHeight+2);
             CGContextAddRect(context, rectangleGrid);
-            CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"00bdb7"].CGColor);
+            CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"009dd0"].CGColor);
             CGContextFillPath(context);
             
             CGContextSetFillColorWithColor(context, 

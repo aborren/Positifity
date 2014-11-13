@@ -19,6 +19,7 @@ class ProgressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.layer
         setupCircle()
         loadWeightText()
 
@@ -48,14 +49,14 @@ class ProgressViewController: UIViewController {
             if(startWeight <= currentWeight){
                 startWeight = currentWeight + 0.01  //fulhack för sector..
             }
-            sector = SAMultisectorSector(color: UIColor(hexString: "4ED2C5"), minValue: -startWeight, maxValue: -goalWeight)
+            sector = SAMultisectorSector(color: UIColor(hexString: "009dd0"), minValue: -startWeight, maxValue: -goalWeight)
             sector.endValue = -currentWeight
             sector.startValue = -startWeight
         }else{
             if(startWeight >= currentWeight){
                 startWeight = currentWeight + 0.01 //fulhack för sector..
             }
-            sector = SAMultisectorSector(color: UIColor(hexString: "4ED2C5"), minValue: startWeight, maxValue: goalWeight)
+            sector = SAMultisectorSector(color: UIColor(hexString: "009dd0"), minValue: startWeight, maxValue: goalWeight)
             sector.endValue = currentWeight
             sector.startValue = startWeight
         }

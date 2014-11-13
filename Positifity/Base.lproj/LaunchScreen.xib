@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,16 +12,18 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kmk-u2-he2">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posi_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cBw-W1-9dY">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="cBw-W1-9dY" secondAttribute="height" multiplier="1:1" id="XCZ-C7-Hqc"/>
+                    </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.61568627450980395" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="kmk-u2-he2" secondAttribute="bottom" id="jNs-6m-A8I"/>
-                <constraint firstAttribute="trailing" secondItem="kmk-u2-he2" secondAttribute="trailing" id="kpb-SN-3fM"/>
-                <constraint firstItem="kmk-u2-he2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mjS-yh-VQh"/>
-                <constraint firstItem="kmk-u2-he2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wE6-gF-a7z"/>
+                <constraint firstAttribute="trailing" secondItem="cBw-W1-9dY" secondAttribute="trailing" id="FeL-vk-d1R"/>
+                <constraint firstItem="cBw-W1-9dY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kjs-sJ-Nei"/>
+                <constraint firstItem="cBw-W1-9dY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l4m-K0-bE4"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -28,6 +31,6 @@
         </view>
     </objects>
     <resources>
-        <image name="launch.jpg" width="640" height="960"/>
+        <image name="posi_logo.png" width="700" height="700"/>
     </resources>
 </document>

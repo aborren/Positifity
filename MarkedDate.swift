@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(MarkedDate)
 class MarkedDate: NSManagedObject {
 
     @NSManaged var markedAs: String

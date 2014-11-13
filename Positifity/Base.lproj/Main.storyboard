@@ -86,14 +86,14 @@
                                 <exclude reference="hOT-AX-edV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="P0y-CY-VGz"/>
-                                <exclude reference="nww-6j-Wz5"/>
                                 <exclude reference="coq-MI-6cL"/>
+                                <exclude reference="9ci-J1-p4m"/>
+                                <exclude reference="HoZ-oh-NjW"/>
                                 <exclude reference="6Kf-0d-F20"/>
                                 <exclude reference="Nsn-Uq-VR9"/>
                                 <exclude reference="VU7-6r-vsS"/>
-                                <exclude reference="9ci-J1-p4m"/>
-                                <exclude reference="HoZ-oh-NjW"/>
+                                <exclude reference="P0y-CY-VGz"/>
+                                <exclude reference="nww-6j-Wz5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -104,14 +104,14 @@
                                 <include reference="hOT-AX-edV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="P0y-CY-VGz"/>
-                                <include reference="nww-6j-Wz5"/>
                                 <include reference="coq-MI-6cL"/>
+                                <include reference="9ci-J1-p4m"/>
+                                <include reference="HoZ-oh-NjW"/>
                                 <include reference="6Kf-0d-F20"/>
                                 <include reference="Nsn-Uq-VR9"/>
                                 <include reference="VU7-6r-vsS"/>
-                                <include reference="9ci-J1-p4m"/>
-                                <include reference="HoZ-oh-NjW"/>
+                                <include reference="P0y-CY-VGz"/>
+                                <include reference="nww-6j-Wz5"/>
                             </mask>
                         </variation>
                     </view>
@@ -149,7 +149,7 @@
                                             <constraint firstAttribute="width" constant="262" id="XIf-OU-LiF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                        <color key="textColor" red="0.0" green="0.74117647058823533" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -195,6 +195,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPg-Wb-e1X">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Update Weight">
+                                    <color key="titleColor" red="0.0" green="0.61568627450000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -238,12 +239,12 @@
                                 <exclude reference="hq7-9J-hMC"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Jyu-6R-Pei"/>
+                                <exclude reference="v3i-TY-2Ru"/>
                                 <exclude reference="2WZ-Jh-GUw"/>
                                 <exclude reference="8GP-mh-beQ"/>
                                 <exclude reference="O7e-Cw-fce"/>
                                 <exclude reference="PNy-GU-ipn"/>
-                                <exclude reference="Jyu-6R-Pei"/>
-                                <exclude reference="v3i-TY-2Ru"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -254,12 +255,12 @@
                                 <include reference="hq7-9J-hMC"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Jyu-6R-Pei"/>
+                                <include reference="v3i-TY-2Ru"/>
                                 <include reference="2WZ-Jh-GUw"/>
                                 <include reference="8GP-mh-beQ"/>
                                 <include reference="O7e-Cw-fce"/>
                                 <include reference="PNy-GU-ipn"/>
-                                <include reference="Jyu-6R-Pei"/>
-                                <include reference="v3i-TY-2Ru"/>
                             </mask>
                         </variation>
                     </view>
