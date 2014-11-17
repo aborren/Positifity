@@ -14,6 +14,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+        if(self.isDayMarked()){
+            self.textLabel.text = "Marked"
+            self.greenBtn.hidden = true
+        }else{
+            self.textLabel.text = "Click it pro!"
+            self.greenBtn.hidden = false
+        }
+        
         self.preferredContentSize.height = 175
     }
     
@@ -40,47 +48,45 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet var greenBtn: UIButton!
     
     @IBAction func greenBtnClick(sender: AnyObject) {
+        //kanske om man vill skriva nåt från NSDEF
         /*var d = NSUserDefaults(suiteName: "group.dna.positifity")?.doubleForKey("test")
         NSUserDefaults(suiteName: "group.dna.positifity")?.setDouble(d!+1.0, forKey: "test")
         TestLabel.text = NSUserDefaults(suiteName: "group.dna.positifity")?.doubleForKey("test").description*/
 
-        /*let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: NSDate(), markedAs: "green")
-        println("hej")
-        fetchMarkedDaysForCurrentYearMonth()
-        
+        let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: NSDate(), markedAs: "green")
         self.saveContext()
-        */
+
         greenBtn.hidden = true
-        textLabel.text = "Well done! You have done excellent for XX days"
+        textLabel.text = "Well done!"
     }
     
   
+    // Opens main application
     @IBAction func openApp(sender: AnyObject) {
-        let url = NSURL(string: "http://www.google.com")
+        let url = NSURL(string: "positifity://")
         self.extensionContext?.openURL(url!, completionHandler: nil)
     }
     
-    //PURE TEST
-    func fetchMarkedDaysForCurrentYearMonth() {
-        println("testing fetch")
+    func isDayMarked()->Bool{
+        let currentDate = NSDate()
+        let year = NSCalendar.currentCalendar().component(NSCalendarUnit.YearCalendarUnit, fromDate: currentDate)
+        let month = NSCalendar.currentCalendar().component(NSCalendarUnit.MonthCalendarUnit, fromDate: currentDate)
+        let day = NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: currentDate)
+        
         let fetchRequest = NSFetchRequest(entityName: "MarkedDate")
+        let fromDate = CalendarUtility.dateFromComponents(day, month: month, year: year)!
+        let toDate = CalendarUtility.dateFromComponents(day+1, month: month, year: year)!
+        let predicate = NSPredicate(format: "date >= %@ && date < %@", fromDate, toDate)
+        fetchRequest.predicate = predicate
         
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [MarkedDate] {
-            for m in fetchResults {
-                let day = NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: m.date)
-                var color = UIColor()
-                if(m.markedAs == "green"){
-                    color = UIColor.greenColor()
-                }else if(m.markedAs == "yellow"){
-                    color = UIColor.yellowColor()
-                }else{
-                    color = UIColor.redColor()
-                }
-                println("Day: \(day) Color: \(m.markedAs)")
+            if(fetchResults.count > 0){
+                return true
             }
         }
-    }
-    
+        
+        return false
+    }   
     
     // MARK: - Core Data stack
     

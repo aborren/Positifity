@@ -103,6 +103,7 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
                 self.managedObjectContext?.deleteObject(m)
             }
         }
+        
     }
     
     //Calendar delegate functions

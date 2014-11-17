@@ -24,6 +24,7 @@
 		B2439CA719F2E3CA00D33D4C /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439CA619F2E3CA00D33D4C /* ProgressViewController.swift */; };
 		B2439CAD19F2E88D00D33D4C /* SAMultisectorControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B2439CAA19F2E88D00D33D4C /* SAMultisectorControl.m */; };
 		B2439CAE19F2E88D00D33D4C /* SAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B2439CAC19F2E88D00D33D4C /* SAMath.m */; };
+		B24916D01A1A596300E11D68 /* CalendarUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9419F2B8E600D33D4C /* CalendarUtility.swift */; };
 		B268583719F3E4AB006AEF8D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B268583619F3E4AB006AEF8D /* HealthKit.framework */; };
 		B2BF2A7919F6AD1B00D23D66 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2A7819F6AD1B00D23D66 /* SettingsViewController.swift */; };
 		B2BF2A7B19F6B2A400D23D66 /* UpdateWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */; };
@@ -496,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B24916D01A1A596300E11D68 /* CalendarUtility.swift in Sources */,
 				B2CC1DA01A1503CC001D3902 /* MarkedDate.swift in Sources */,
 				B2C6C09F19FFE3E000A336D0 /* TodayViewController.swift in Sources */,
 				B2C6C0AA19FFF13200A336D0 /* Positifity.xcdatamodeld in Sources */,
