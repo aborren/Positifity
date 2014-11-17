@@ -14,6 +14,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+        self.preferredContentSize.height = 175
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,19 +32,34 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         completionHandler(NCUpdateResult.NewData)
     }
     
-    @IBAction func test(sender: AnyObject) {
+    func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+    
+    @IBOutlet var textLabel: UILabel!
+    @IBOutlet var greenBtn: UIButton!
+    
+    @IBAction func greenBtnClick(sender: AnyObject) {
         /*var d = NSUserDefaults(suiteName: "group.dna.positifity")?.doubleForKey("test")
         NSUserDefaults(suiteName: "group.dna.positifity")?.setDouble(d!+1.0, forKey: "test")
         TestLabel.text = NSUserDefaults(suiteName: "group.dna.positifity")?.doubleForKey("test").description*/
-        let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: NSDate(), markedAs: "green")
+
+        /*let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: NSDate(), markedAs: "green")
         println("hej")
         fetchMarkedDaysForCurrentYearMonth()
         
         self.saveContext()
-        
+        */
+        greenBtn.hidden = true
+        textLabel.text = "Well done! You have done excellent for XX days"
     }
     
   
+    @IBAction func openApp(sender: AnyObject) {
+        let url = NSURL(string: "http://www.google.com")
+        self.extensionContext?.openURL(url!, completionHandler: nil)
+    }
+    
     //PURE TEST
     func fetchMarkedDaysForCurrentYearMonth() {
         println("testing fetch")
