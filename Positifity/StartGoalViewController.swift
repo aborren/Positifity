@@ -42,9 +42,9 @@ class StartGoalViewController: UIViewController {
     func numberString(input: String) -> Double? {
         let formatter = NSNumberFormatter()
         var result: Double? = nil
-        let parsed = formatter.numberFromString(input)
+        let parsed = formatter.numberFromString(input) as Double?
         if let parsed = parsed {
-            result = parsed as Double
+            result = parsed
         }
         return result
     }

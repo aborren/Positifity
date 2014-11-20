@@ -12,8 +12,11 @@ import HealthKit
 class ProgressViewController: UIViewController {
 
     @IBOutlet var currentWeight: UILabel!
-    @IBOutlet var goalWeight: UILabel!
+    @IBOutlet var goalWeightLabel: UILabel!
     @IBOutlet var circle: SAMultisectorControl!
+    
+    var goalWeight: Double = 0
+   var goalPercentage: Double = 0
     
     var weightLoss: Bool = true
     
@@ -22,6 +25,10 @@ class ProgressViewController: UIViewController {
         self.view.layer
         setupCircle()
         loadWeightText()
+        
+        //timer for changing goalweight/progress %
+        NSTimer.scheduledTimerWithTimeInterval(6.0, target: self, selector: "transition", userInfo: nil, repeats: true)
+        
 
         // Do any additional setup after loading the view.
     }
@@ -40,7 +47,7 @@ class ProgressViewController: UIViewController {
         var currentWeight = NSUserDefaults.standardUserDefaults().doubleForKey("weight")
         
         //if losing weight or gaining
-        weightLoss = (startWeight - goalWeight > 0)
+        weightLoss = (startWeight - goalWeight >= 0)
         self.circle.addTarget(self, action: "multisectorValueChanged", forControlEvents: UIControlEvents.ValueChanged)
         self.circle.userInteractionEnabled = false
         
@@ -74,11 +81,45 @@ class ProgressViewController: UIViewController {
     }
 
     func loadWeightText(){
-        goalWeight.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description
-        if let wu = NSUserDefaults.standardUserDefaults().stringForKey("weightUnit") {
+       goalWeight = NSUserDefaults.standardUserDefaults().doubleForKey("goal")
+        var startWeight = NSUserDefaults.standardUserDefaults().doubleForKey("startWeight")
+        var currentWeight = NSUserDefaults.standardUserDefaults().doubleForKey("weight")
+        if(weightLoss){
+            if(startWeight <= currentWeight){
+                goalPercentage = 0
+            }else{
+                goalPercentage = (startWeight - currentWeight)/(startWeight - goalWeight) * 100
+            }
+        }else{
+            if(startWeight >= currentWeight){
+                goalPercentage = 0
+            }
+            else{
+                goalPercentage = (currentWeight - startWeight)/(goalWeight - startWeight) * 100
+            }
+        }
+        
+        goalWeightLabel.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description
+       /* if let wu = NSUserDefaults.standardUserDefaults().stringForKey("weightUnit") {
             if let hu = NSUserDefaults.standardUserDefaults().stringForKey("heightUnit") {
                 currentWeight.text = NSUserDefaults.standardUserDefaults().doubleForKey("weight").description + wu + " " + NSUserDefaults.standardUserDefaults().doubleForKey("height").description + hu
             }
+        }*/
+    }
+    
+    
+    func transition(){
+        let anim: CATransition = CATransition()
+        anim.duration = 1.2
+        anim.type = kCATransitionFade
+        anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        anim.removedOnCompletion = false
+        goalWeightLabel.layer.addAnimation(anim, forKey: "changeTextTransition")
+        if(self.goalWeightLabel.text == goalWeight.description){
+            self.goalWeightLabel.text = goalPercentage.description
+        }
+        else{
+            self.goalWeightLabel.text = goalWeight.description
         }
     }
     
