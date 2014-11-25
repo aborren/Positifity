@@ -14,9 +14,10 @@ class ProgressViewController: UIViewController {
     @IBOutlet var currentWeight: UILabel!
     @IBOutlet var goalWeightLabel: UILabel!
     @IBOutlet var circle: SAMultisectorControl!
+    @IBOutlet var descriptionLabel: UILabel!
     
     var goalWeight: Double = 0
-   var goalPercentage: Double = 0
+    var goalPercentage: Double = 0
     
     var weightLoss: Bool = true
     
@@ -98,7 +99,8 @@ class ProgressViewController: UIViewController {
                 goalPercentage = (currentWeight - startWeight)/(goalWeight - startWeight) * 100
             }
         }
-        
+        println("Start: \(startWeight) Current: \(currentWeight)")
+        descriptionLabel.text = "Goal weight"
         goalWeightLabel.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description
        /* if let wu = NSUserDefaults.standardUserDefaults().stringForKey("weightUnit") {
             if let hu = NSUserDefaults.standardUserDefaults().stringForKey("heightUnit") {
@@ -115,10 +117,13 @@ class ProgressViewController: UIViewController {
         anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         anim.removedOnCompletion = false
         goalWeightLabel.layer.addAnimation(anim, forKey: "changeTextTransition")
+        descriptionLabel.layer.addAnimation(anim, forKey: "descriptionTextTransition")
         if(self.goalWeightLabel.text == goalWeight.description){
-            self.goalWeightLabel.text = goalPercentage.description
+            self.descriptionLabel.text = "Progress"
+            self.goalWeightLabel.text = NSString(format: "%.0f", goalPercentage) + "%"
         }
         else{
+            self.descriptionLabel.text = "Goal weight"
             self.goalWeightLabel.text = goalWeight.description
         }
     }

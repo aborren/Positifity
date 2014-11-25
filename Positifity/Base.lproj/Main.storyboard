@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5o3-lE-N61">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5o3-lE-N61">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294.5" y="-16"/>
+            <point key="canvasLocation" x="1383" y="-97"/>
         </scene>
         <!--Current Progress-->
         <scene sceneID="AL8-Bg-Lt4">
@@ -163,31 +163,65 @@
                                             </mask>
                                         </variation>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjR-lP-zem">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="0Cj-Tj-fDu"/>
+                                            <constraint firstAttribute="height" constant="21" id="QWh-Uc-SHg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="0Cj-Tj-fDu"/>
+                                                <exclude reference="QWh-Uc-SHg"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="0Cj-Tj-fDu"/>
+                                                <include reference="QWh-Uc-SHg"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="SjR-lP-zem" secondAttribute="centerX" id="7kN-9y-pp3"/>
                                     <constraint firstAttribute="width" secondItem="eu6-tr-Bh1" secondAttribute="height" multiplier="1:1" id="UY4-5I-q0Z"/>
+                                    <constraint firstAttribute="centerY" secondItem="SjR-lP-zem" secondAttribute="centerY" id="n3N-QH-gXo">
+                                        <variation key="widthClass=compact" constant="33.5"/>
+                                    </constraint>
                                     <constraint firstAttribute="centerX" secondItem="v3Q-xX-wVa" secondAttribute="centerX" id="spi-76-N3N"/>
-                                    <constraint firstAttribute="centerY" secondItem="v3Q-xX-wVa" secondAttribute="centerY" id="z9M-Uo-GSz"/>
+                                    <constraint firstAttribute="centerY" secondItem="v3Q-xX-wVa" secondAttribute="centerY" id="z9M-Uo-GSz">
+                                        <variation key="widthClass=compact" constant="-7"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="v3Q-xX-wVa"/>
+                                        <exclude reference="SjR-lP-zem"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="UY4-5I-q0Z"/>
                                         <exclude reference="spi-76-N3N"/>
                                         <exclude reference="z9M-Uo-GSz"/>
+                                        <exclude reference="7kN-9y-pp3"/>
+                                        <exclude reference="n3N-QH-gXo"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="v3Q-xX-wVa"/>
+                                        <include reference="SjR-lP-zem"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="UY4-5I-q0Z"/>
                                         <include reference="spi-76-N3N"/>
                                         <include reference="z9M-Uo-GSz"/>
+                                        <include reference="7kN-9y-pp3"/>
+                                        <include reference="n3N-QH-gXo"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -287,6 +321,7 @@
                     <connections>
                         <outlet property="circle" destination="eu6-tr-Bh1" id="h0j-23-acL"/>
                         <outlet property="currentWeight" destination="hq7-9J-hMC" id="BpF-Zi-Zgd"/>
+                        <outlet property="descriptionLabel" destination="SjR-lP-zem" id="ZxR-NJ-zwG"/>
                         <outlet property="goalWeightLabel" destination="v3Q-xX-wVa" id="mWx-LQ-k2x"/>
                     </connections>
                 </viewController>
@@ -446,7 +481,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iyX-bf-bNB">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="111" y="101" width="179" height="30"/>
                                 </variation>

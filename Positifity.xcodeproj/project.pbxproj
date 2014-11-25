@@ -30,7 +30,6 @@
 		B2BF2A7B19F6B2A400D23D66 /* UpdateWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */; };
 		B2C4848D19F556C700061FB8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4848C19F556C700061FB8 /* TabBarViewController.swift */; };
 		B2C4848F19F5588300061FB8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4848E19F5588300061FB8 /* StartViewController.swift */; };
-		B2C4849119F55D4800061FB8 /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2C4849019F55D4800061FB8 /* launch.jpg */; };
 		B2C4849319F562C500061FB8 /* StartGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4849219F562C500061FB8 /* StartGoalViewController.swift */; };
 		B2C4849519F5693700061FB8 /* StartEnterCurrentDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4849419F5693700061FB8 /* StartEnterCurrentDataViewController.swift */; };
 		B2C6C09A19FFE3E000A336D0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C6C09919FFE3E000A336D0 /* NotificationCenter.framework */; };
@@ -116,7 +115,6 @@
 		B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateWeightViewController.swift; sourceTree = "<group>"; };
 		B2C4848C19F556C700061FB8 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ../../beta5fixCoreData/TabBarViewController.swift; sourceTree = "<group>"; };
 		B2C4848E19F5588300061FB8 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		B2C4849019F55D4800061FB8 /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
 		B2C4849219F562C500061FB8 /* StartGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGoalViewController.swift; sourceTree = "<group>"; };
 		B2C4849419F5693700061FB8 /* StartEnterCurrentDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartEnterCurrentDataViewController.swift; sourceTree = "<group>"; };
 		B2C6C09719FFE3E000A336D0 /* PositifityWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PositifityWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +126,7 @@
 		B2CC1DA11A150A83001D3902 /* dot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_yellow.png; sourceTree = "<group>"; };
 		B2CC1DA21A150A83001D3902 /* dot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_red.png; sourceTree = "<group>"; };
 		B2CC1DA31A150A83001D3902 /* dot_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_green.png; sourceTree = "<group>"; };
-		B2CF59131A09138F00BB7C5B /* posi_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = posi_logo.png; sourceTree = "<group>"; };
+		B2CF59131A09138F00BB7C5B /* posi_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = posi_logo.png; path = Positifity/posi_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +191,6 @@
 				B2439C6519F29E0800D33D4C /* Main.storyboard */,
 				B2439C6819F29E0800D33D4C /* Images.xcassets */,
 				B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */,
-				B2CF59131A09138F00BB7C5B /* posi_logo.png */,
-				B2C4849019F55D4800061FB8 /* launch.jpg */,
 				B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */,
 				B2439C5C19F29E0800D33D4C /* Supporting Files */,
 				B2439C8719F2A5C400D33D4C /* Positifity-Bridging-Header.h */,
@@ -304,6 +300,7 @@
 				B2CC1DA11A150A83001D3902 /* dot_yellow.png */,
 				B2CC1DA21A150A83001D3902 /* dot_red.png */,
 				B2CC1DA31A150A83001D3902 /* dot_green.png */,
+				B2CF59131A09138F00BB7C5B /* posi_logo.png */,
 			);
 			name = SharedImages;
 			sourceTree = "<group>";
@@ -430,7 +427,6 @@
 				B2CC1DA41A150A83001D3902 /* dot_yellow.png in Resources */,
 				B2439C6719F29E0800D33D4C /* Main.storyboard in Resources */,
 				B2CC1DA61A150A83001D3902 /* dot_red.png in Resources */,
-				B2C4849119F55D4800061FB8 /* launch.jpg in Resources */,
 				B2439C6C19F29E0800D33D4C /* LaunchScreen.xib in Resources */,
 				B2439C6919F29E0800D33D4C /* Images.xcassets in Resources */,
 				B2CC1DA81A150A83001D3902 /* dot_green.png in Resources */,
