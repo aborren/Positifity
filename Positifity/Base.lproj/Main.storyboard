@@ -365,28 +365,28 @@
                                     <segue destination="UMP-lv-G4y" kind="unwind" identifier="cancelSettingSegue" unwindAction="unwindToSegue:" id="NKA-79-dif"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djT-wc-efP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new goal" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djT-wc-efP">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="147" y="124" width="97" height="30"/>
+                                    <rect key="frame" x="87" y="124" width="157" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-Y1-pQq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="change height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-Y1-pQq">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="147" y="178" width="97" height="30"/>
+                                    <rect key="frame" x="87" y="178" width="157" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhd-3n-4Xm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="change start weigt" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhd-3n-4Xm">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="152" y="237" width="97" height="30"/>
+                                    <rect key="frame" x="87" y="237" width="162" height="30"/>
                                 </variation>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ma0-Ns-5Pe">
@@ -411,6 +411,33 @@
                                     <rect key="frame" x="80" y="281" width="241" height="29"/>
                                 </variation>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tX-kG-YfS">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="135" y="154" width="51" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFr-uk-hq5">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="114" y="216" width="93" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9a-0y-b2g">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="135" y="95" width="36" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -422,6 +449,9 @@
                                 <exclude reference="nhd-3n-4Xm"/>
                                 <exclude reference="Ma0-Ns-5Pe"/>
                                 <exclude reference="luz-mb-77W"/>
+                                <exclude reference="1tX-kG-YfS"/>
+                                <exclude reference="RFr-uk-hq5"/>
+                                <exclude reference="v9a-0y-b2g"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -433,9 +463,19 @@
                                 <include reference="nhd-3n-4Xm"/>
                                 <include reference="Ma0-Ns-5Pe"/>
                                 <include reference="luz-mb-77W"/>
+                                <include reference="1tX-kG-YfS"/>
+                                <include reference="RFr-uk-hq5"/>
+                                <include reference="v9a-0y-b2g"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="heightTextField" destination="dCJ-Y1-pQq" id="WJ8-LV-X9g"/>
+                        <outlet property="heightUnitSegmentedControl" destination="Ma0-Ns-5Pe" id="3QC-11-YLf"/>
+                        <outlet property="newGoalTextField" destination="djT-wc-efP" id="U73-On-Hfw"/>
+                        <outlet property="weightTextField" destination="nhd-3n-4Xm" id="Li4-UW-q6h"/>
+                        <outlet property="weightUnitSegmentedControl" destination="luz-mb-77W" id="4rR-14-V6w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYa-XS-oMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UMP-lv-G4y" userLabel="Exit" sceneMemberID="exit"/>

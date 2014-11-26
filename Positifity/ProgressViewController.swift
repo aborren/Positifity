@@ -26,6 +26,9 @@ class ProgressViewController: UIViewController {
         self.view.layer
         setupCircle()
         loadWeightText()
+    
+        //Setup timer for changing goalweight/progress % transition
+        NSTimer.scheduledTimerWithTimeInterval(6.0, target: self, selector: "transition", userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,9 +99,6 @@ class ProgressViewController: UIViewController {
         println("Start: \(startWeight) Current: \(currentWeight)")
         descriptionLabel.text = "Goal weight"
         goalWeightLabel.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description
-        
-        //Setup timer for changing goalweight/progress % transition
-        NSTimer.scheduledTimerWithTimeInterval(6.0, target: self, selector: "transition", userInfo: nil, repeats: true)
     }
     
     func setupAnimation(){
