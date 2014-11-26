@@ -19,7 +19,7 @@ class ProgressViewController: UIViewController {
     var goalWeight: Double = 0
     var goalPercentage: Double = 0
     
-    var weightLoss: Bool = true
+    var weightLoss: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,25 +44,31 @@ class ProgressViewController: UIViewController {
         var goalWeight = NSUserDefaults.standardUserDefaults().doubleForKey("goal")
         var currentWeight = NSUserDefaults.standardUserDefaults().doubleForKey("weight")
         
-        //if losing weight or gaining
-        weightLoss = (startWeight - goalWeight >= 0)
+        //if losing weight or gaining or none
+        weightLoss = startWeight - goalWeight
+        
         self.circle.addTarget(self, action: "multisectorValueChanged", forControlEvents: UIControlEvents.ValueChanged)
         self.circle.userInteractionEnabled = false
         
         var sector : SAMultisectorSector
-        if(weightLoss){
+        
+        if(weightLoss > 0){
             if(startWeight <= currentWeight){
                 startWeight = currentWeight + 0.01  //fulhack för sector..
             }
             sector = SAMultisectorSector(color: UIColor(hexString: "009dd0"), minValue: -startWeight, maxValue: -goalWeight)
             sector.endValue = -currentWeight
             sector.startValue = -startWeight
-        }else{
+        }else if(weightLoss < 0){
             if(startWeight >= currentWeight){
                 startWeight = currentWeight + 0.01 //fulhack för sector..
             }
             sector = SAMultisectorSector(color: UIColor(hexString: "009dd0"), minValue: startWeight, maxValue: goalWeight)
             sector.endValue = currentWeight
+            sector.startValue = startWeight
+        }else{
+            sector = SAMultisectorSector(color: UIColor(hexString: "009dd0"), minValue: startWeight, maxValue: goalWeight+0.01) //fulhack för sector..
+            sector.endValue = goalWeight+0.01 //fulhack för sector..
             sector.startValue = startWeight
         }
 
@@ -82,21 +88,24 @@ class ProgressViewController: UIViewController {
        goalWeight = NSUserDefaults.standardUserDefaults().doubleForKey("goal")
         var startWeight = NSUserDefaults.standardUserDefaults().doubleForKey("startWeight")
         var currentWeight = NSUserDefaults.standardUserDefaults().doubleForKey("weight")
-        if(weightLoss){
-            if(startWeight <= currentWeight){
+        if(weightLoss > 0){
+            if(startWeight < currentWeight){
                 goalPercentage = 0
             }else{
                 goalPercentage = (startWeight - currentWeight)/(startWeight - goalWeight) * 100
             }
-        }else{
-            if(startWeight >= currentWeight){
+        }else if(weightLoss < 0){
+            if(startWeight > currentWeight){
                 goalPercentage = 0
             }
             else{
                 goalPercentage = (currentWeight - startWeight)/(goalWeight - startWeight) * 100
             }
         }
-        println("Start: \(startWeight) Current: \(currentWeight)")
+        else{
+            goalPercentage = 100
+        }
+        println("Start: \(startWeight) Current: \(currentWeight) Goal: \(goalWeight) WeightLoss=\(weightLoss)")
         descriptionLabel.text = "Goal weight"
         goalWeightLabel.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description
     }
@@ -126,7 +135,6 @@ class ProgressViewController: UIViewController {
     @IBAction func unwindToSegue (segue : UIStoryboardSegue) {
         self.setupCircle()
         loadWeightText()
-        println(segue.identifier)
     }
     
     /*
