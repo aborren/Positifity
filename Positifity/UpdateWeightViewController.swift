@@ -15,7 +15,6 @@ class UpdateWeightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -24,10 +23,7 @@ class UpdateWeightViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    
     // MARK: - Navigation
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier=="saveWeightUpdate"){
             updateWeight()
@@ -35,22 +31,26 @@ class UpdateWeightViewController: UIViewController {
     }
 
     func updateWeight(){
-        if let weight = numberString(newWeightTextField.text){
+        if let weight = HelperFunctions.numberString(newWeightTextField.text){
             saveWeightToHealthKit(weight)
             NSUserDefaults.standardUserDefaults().setDouble(weight, forKey: "weight")
             NSUserDefaults.standardUserDefaults().synchronize()
         }
-
     }
     
     func saveWeightToHealthKit(weight: Double){
-        //unitcheck - todo
-        let unitType = HKUnit.gramUnitWithMetricPrefix(HKMetricPrefix.Kilo) ///////
+        //Check unit type. Default Kilograms, but change if set to Pounds or Stones
+        var unitType = HKUnit.gramUnitWithMetricPrefix(HKMetricPrefix.Kilo)
+        if let weightUnit = NSUserDefaults.standardUserDefaults().stringForKey("weightUnit"){
+            if(weightUnit == "Pounds"){
+                unitType = HKUnit.poundUnit()
+            }else if(weightUnit == "Stones"){
+                unitType = HKUnit.stoneUnit()
+            }
+        }
         let weightQuantity = HKQuantity(unit: unitType, doubleValue: weight)
-        
         let weightType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
         let currentDate = NSDate()
-        
         let weightSample = HKQuantitySample(type: weightType, quantity: weightQuantity, startDate: currentDate, endDate: currentDate)
         
         let appDel = UIApplication.sharedApplication().delegate as AppDelegate
@@ -60,16 +60,5 @@ class UpdateWeightViewController: UIViewController {
                 println("An error occured\(error)")
             }
             })
-        
-    }
-    
-    func numberString(input: String) -> Double? {
-        let formatter = NSNumberFormatter()
-        var result: Double? = nil
-        let parsed = formatter.numberFromString(input)
-        if let parsed = parsed {
-            result = parsed as Double
-        }
-        return result
     }
 }

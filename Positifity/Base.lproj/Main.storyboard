@@ -205,10 +205,10 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="UY4-5I-q0Z"/>
-                                        <exclude reference="spi-76-N3N"/>
-                                        <exclude reference="z9M-Uo-GSz"/>
                                         <exclude reference="7kN-9y-pp3"/>
                                         <exclude reference="n3N-QH-gXo"/>
+                                        <exclude reference="spi-76-N3N"/>
+                                        <exclude reference="z9M-Uo-GSz"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -218,10 +218,10 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="UY4-5I-q0Z"/>
-                                        <include reference="spi-76-N3N"/>
-                                        <include reference="z9M-Uo-GSz"/>
                                         <include reference="7kN-9y-pp3"/>
                                         <include reference="n3N-QH-gXo"/>
+                                        <include reference="spi-76-N3N"/>
+                                        <include reference="z9M-Uo-GSz"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -456,11 +456,24 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dki-qY-nm4">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="G53-2v-0eS"/>
+                                    <constraint firstAttribute="width" constant="72" id="wRZ-AQ-u7X"/>
+                                </constraints>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="60" y="43" width="72" height="30"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G53-2v-0eS"/>
+                                        <exclude reference="wRZ-AQ-u7X"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="G53-2v-0eS"/>
+                                        <include reference="wRZ-AQ-u7X"/>
+                                    </mask>
                                 </variation>
                                 <connections>
                                     <segue destination="BeP-QL-qGF" kind="unwind" identifier="cancelWeightUpdate" unwindAction="unwindToSegue:" id="Ke4-lw-gq0"/>
@@ -471,9 +484,6 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="163" width="46" height="30"/>
-                                </variation>
                                 <connections>
                                     <segue destination="BeP-QL-qGF" kind="unwind" identifier="saveWeightUpdate" unwindAction="unwindToSegue:" id="r2N-kr-f34"/>
                                 </connections>
@@ -482,17 +492,60 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="111" y="101" width="179" height="30"/>
-                                </variation>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posibg.png" translatesAutoresizingMaskIntoConstraints="NO" id="pWi-As-0uB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ZnF-Sd-6rG"/>
+                                    <constraint firstAttribute="height" constant="240" id="nkl-Zj-ymk"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZnF-Sd-6rG"/>
+                                        <exclude reference="nkl-Zj-ymk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ZnF-Sd-6rG"/>
+                                        <include reference="nkl-Zj-ymk"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dki-qY-nm4" firstAttribute="leading" secondItem="JWf-y8-vl7" secondAttribute="leading" constant="16" id="6ma-pl-nt4"/>
+                            <constraint firstItem="Dki-qY-nm4" firstAttribute="top" secondItem="LGK-UA-tsx" secondAttribute="bottom" constant="8" id="9av-RZ-zKu"/>
+                            <constraint firstAttribute="centerX" secondItem="iyX-bf-bNB" secondAttribute="centerX" id="AAS-Oq-WX6"/>
+                            <constraint firstAttribute="centerX" secondItem="pWi-As-0uB" secondAttribute="centerX" id="dpt-VS-8Jb"/>
+                            <constraint firstAttribute="centerY" secondItem="iyX-bf-bNB" secondAttribute="centerY" id="exP-e7-CBg">
+                                <variation key="widthClass=compact" constant="175"/>
+                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="pWi-As-0uB" secondAttribute="centerY" id="g9F-9F-5xm">
+                                <variation key="widthClass=compact" constant="56"/>
+                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="Ykz-U3-gPd" secondAttribute="centerY" id="sAs-Xf-ytr">
+                                <variation key="widthClass=compact" constant="137"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="Ykz-U3-gPd" secondAttribute="centerX" id="tv7-c7-vrs"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Dki-qY-nm4"/>
                                 <exclude reference="Ykz-U3-gPd"/>
                                 <exclude reference="iyX-bf-bNB"/>
+                                <exclude reference="pWi-As-0uB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="AAS-Oq-WX6"/>
+                                <exclude reference="exP-e7-CBg"/>
+                                <exclude reference="6ma-pl-nt4"/>
+                                <exclude reference="9av-RZ-zKu"/>
+                                <exclude reference="sAs-Xf-ytr"/>
+                                <exclude reference="tv7-c7-vrs"/>
+                                <exclude reference="dpt-VS-8Jb"/>
+                                <exclude reference="g9F-9F-5xm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -500,6 +553,17 @@
                                 <include reference="Dki-qY-nm4"/>
                                 <include reference="Ykz-U3-gPd"/>
                                 <include reference="iyX-bf-bNB"/>
+                                <include reference="pWi-As-0uB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="AAS-Oq-WX6"/>
+                                <include reference="exP-e7-CBg"/>
+                                <include reference="6ma-pl-nt4"/>
+                                <include reference="9av-RZ-zKu"/>
+                                <include reference="sAs-Xf-ytr"/>
+                                <include reference="tv7-c7-vrs"/>
+                                <include reference="dpt-VS-8Jb"/>
+                                <include reference="g9F-9F-5xm"/>
                             </mask>
                         </variation>
                     </view>
@@ -734,4 +798,7 @@
             <point key="canvasLocation" x="429" y="-97"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="posibg.png" width="700" height="700"/>
+    </resources>
 </document>

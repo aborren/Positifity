@@ -19,19 +19,15 @@ class StartEnterCurrentDataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.perfromQueryForWeightSamples()
         self.perfromQueryForHeightSamples()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func perfromQueryForWeightSamples() {
-        
         let weightSampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
         let sortDesc: NSSortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
         
@@ -53,12 +49,9 @@ class StartEnterCurrentDataViewController: UIViewController {
         })
         var appDel = UIApplication.sharedApplication().delegate as AppDelegate
         appDel.healthStore.executeQuery(query)
-        
-        //sätt start weight i nsuserdef
     }
     
     func perfromQueryForHeightSamples() {
-        
         let heightSampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)
         let sortDesc: NSSortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
         
@@ -80,33 +73,17 @@ class StartEnterCurrentDataViewController: UIViewController {
         })
         let appDel = UIApplication.sharedApplication().delegate as AppDelegate
         appDel.healthStore.executeQuery(query)
-        
-        //sätt height i nsuserdef
     }
 
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
-    
-    //MARK: Utility functions
-    func numberString(input: String) -> Double? {
-        let formatter = NSNumberFormatter()
-        var result: Double? = nil
-        let parsed = formatter.numberFromString(input)
-        if let parsed = parsed {
-            result = (parsed as Double)
-        }
-        return result
-    }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-
-    }
-    
+    // MARK: - Navigation
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject?) -> Bool {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if let weight = numberString(weightTextView.text){
+        if let weight = HelperFunctions.numberString(weightTextView.text){
             NSUserDefaults.standardUserDefaults().setDouble(weight, forKey: "startWeight")
             NSUserDefaults.standardUserDefaults().setDouble(weight, forKey: "weight")
             NSUserDefaults.standardUserDefaults().setValue(weightUnitSegmentedControl.titleForSegmentAtIndex(weightUnitSegmentedControl.selectedSegmentIndex), forKey: "weightUnit")
@@ -116,7 +93,7 @@ class StartEnterCurrentDataViewController: UIViewController {
             //inte gå nästa steg
         }
         
-        if let height = numberString(heightTextView.text){
+        if let height = HelperFunctions.numberString(heightTextView.text){
             NSUserDefaults.standardUserDefaults().setDouble(height, forKey: "height")
             NSUserDefaults.standardUserDefaults().setObject(heightUnitSegmentedControl.titleForSegmentAtIndex(heightUnitSegmentedControl.selectedSegmentIndex), forKey: "heightUnit")
         }else{
@@ -124,6 +101,7 @@ class StartEnterCurrentDataViewController: UIViewController {
             //inte gå nästa steg
         }
         
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isSetup")
         NSUserDefaults.standardUserDefaults().synchronize()
         return true
     }

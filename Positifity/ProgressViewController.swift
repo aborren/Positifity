@@ -26,12 +26,6 @@ class ProgressViewController: UIViewController {
         self.view.layer
         setupCircle()
         loadWeightText()
-        
-        //timer for changing goalweight/progress %
-        NSTimer.scheduledTimerWithTimeInterval(6.0, target: self, selector: "transition", userInfo: nil, repeats: true)
-        
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,15 +96,12 @@ class ProgressViewController: UIViewController {
         println("Start: \(startWeight) Current: \(currentWeight)")
         descriptionLabel.text = "Goal weight"
         goalWeightLabel.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description
-       /* if let wu = NSUserDefaults.standardUserDefaults().stringForKey("weightUnit") {
-            if let hu = NSUserDefaults.standardUserDefaults().stringForKey("heightUnit") {
-                currentWeight.text = NSUserDefaults.standardUserDefaults().doubleForKey("weight").description + wu + " " + NSUserDefaults.standardUserDefaults().doubleForKey("height").description + hu
-            }
-        }*/
+        
+        //Setup timer for changing goalweight/progress % transition
+        NSTimer.scheduledTimerWithTimeInterval(6.0, target: self, selector: "transition", userInfo: nil, repeats: true)
     }
     
-    
-    func transition(){
+    func setupAnimation(){
         let anim: CATransition = CATransition()
         anim.duration = 1.2
         anim.type = kCATransitionFade
@@ -118,6 +109,10 @@ class ProgressViewController: UIViewController {
         anim.removedOnCompletion = false
         goalWeightLabel.layer.addAnimation(anim, forKey: "changeTextTransition")
         descriptionLabel.layer.addAnimation(anim, forKey: "descriptionTextTransition")
+    }
+    
+    func transition(){
+        setupAnimation()
         if(self.goalWeightLabel.text == goalWeight.description){
             self.descriptionLabel.text = "Progress"
             self.goalWeightLabel.text = NSString(format: "%.0f", goalPercentage) + "%"
