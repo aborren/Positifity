@@ -13,8 +13,7 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
 
     //Core data
     lazy var managedObjectContext : NSManagedObjectContext? = {
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        if let managedObjectContext = appDelegate.managedObjectContext {
+        if let managedObjectContext = CoreDataStack().managedObjectContext {
             return managedObjectContext
         }
         else {
@@ -46,7 +45,6 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
         
         markCalendarWithCoreData()
         calendar.reloadInputViews()
-        println(calendar.frame.height)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,9 +52,23 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.managedObjectContext?.save(nil)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        calendar.reloadInputViews()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        markCalendarWithCoreData()
+    }
+    
     func calendarLayout(){
         let xCenterConstraint = NSLayoutConstraint(item: self.calendar, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
-        
     }
 
     //Core data access + fill arrays for marking
@@ -104,6 +116,7 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
             }
         }
         
+        self.managedObjectContext?.save(nil)
     }
     
     //Calendar delegate functions
@@ -186,6 +199,7 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
             }
             if(greenBtn.selected){
                 let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "green")
+                self.managedObjectContext?.save(nil)
             }
             markCalendarWithCoreData()
             calendar.reloadInputViews()
@@ -202,6 +216,7 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
             }
             if(yellowBtn.selected){
                 let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "yellow")
+                self.managedObjectContext?.save(nil)
             }
             markCalendarWithCoreData()
             calendar.reloadInputViews()
@@ -218,6 +233,7 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
             }
             if(redBtn.selected){
                 let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "red")
+                self.managedObjectContext?.save(nil)
             }
             markCalendarWithCoreData()
             calendar.reloadInputViews()

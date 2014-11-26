@@ -10,8 +10,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    var test = 3
-    
     @IBOutlet var newGoalTextField: UITextField!
     @IBOutlet var heightTextField: UITextField!
     @IBOutlet var weightTextField: UITextField!
@@ -74,8 +72,6 @@ class SettingsViewController: UIViewController {
     }
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier == "saveSettingSegue"){
             saveValues()

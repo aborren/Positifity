@@ -39,6 +39,8 @@
 		B2C6C0A419FFE3E000A336D0 /* PositifityWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B2C6C09719FFE3E000A336D0 /* PositifityWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B2C6C0AA19FFF13200A336D0 /* Positifity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */; };
 		B2C91FAF1A25E5F700CA6D47 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C91FAE1A25E5F700CA6D47 /* HelperFunctions.swift */; };
+		B2C91FB11A25FFBF00CA6D47 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C91FB01A25FFBF00CA6D47 /* CoreDataStack.swift */; };
+		B2C91FB21A26091500CA6D47 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C91FB01A25FFBF00CA6D47 /* CoreDataStack.swift */; };
 		B2CC1D9E1A14FD4B001D3902 /* Positifity.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */; };
 		B2CC1DA01A1503CC001D3902 /* MarkedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9019F2ACCD00D33D4C /* MarkedDate.swift */; };
 		B2CC1DA41A150A83001D3902 /* dot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CC1DA11A150A83001D3902 /* dot_yellow.png */; };
@@ -127,6 +129,7 @@
 		B2C6C0A019FFE3E000A336D0 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		B2C6C0A919FFE5A100A336D0 /* PositifityWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PositifityWidget.entitlements; sourceTree = "<group>"; };
 		B2C91FAE1A25E5F700CA6D47 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		B2C91FB01A25FFBF00CA6D47 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B2CC1DA11A150A83001D3902 /* dot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_yellow.png; sourceTree = "<group>"; };
 		B2CC1DA21A150A83001D3902 /* dot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_red.png; sourceTree = "<group>"; };
 		B2CC1DA31A150A83001D3902 /* dot_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_green.png; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 				B2439C9019F2ACCD00D33D4C /* MarkedDate.swift */,
 				B2C91FAE1A25E5F700CA6D47 /* HelperFunctions.swift */,
 				B2439C9419F2B8E600D33D4C /* CalendarUtility.swift */,
+				B2C91FB01A25FFBF00CA6D47 /* CoreDataStack.swift */,
 				B2439C9219F2B81600D33D4C /* ViewControllers */,
 				B2439C6519F29E0800D33D4C /* Main.storyboard */,
 				B2439C6819F29E0800D33D4C /* Images.xcassets */,
@@ -470,6 +474,7 @@
 				B2439CA519F2C0A600D33D4C /* UIColor+expanded.m in Sources */,
 				B2439CAD19F2E88D00D33D4C /* SAMultisectorControl.m in Sources */,
 				B2439CA119F2C0A600D33D4C /* VRGCalendarView.m in Sources */,
+				B2C91FB11A25FFBF00CA6D47 /* CoreDataStack.swift in Sources */,
 				B2439CA319F2C0A600D33D4C /* NSMutableArray+convenience.m in Sources */,
 				B2C91FAF1A25E5F700CA6D47 /* HelperFunctions.swift in Sources */,
 				B2C4848D19F556C700061FB8 /* TabBarViewController.swift in Sources */,
@@ -501,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C91FB21A26091500CA6D47 /* CoreDataStack.swift in Sources */,
 				B24916D01A1A596300E11D68 /* CalendarUtility.swift in Sources */,
 				B2CC1DA01A1503CC001D3902 /* MarkedDate.swift in Sources */,
 				B2C6C09F19FFE3E000A336D0 /* TodayViewController.swift in Sources */,
