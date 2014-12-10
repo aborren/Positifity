@@ -327,7 +327,7 @@
                                    [UIColor colorWithHexString:@"0x383838"].CGColor);
     for (int i =0; i<[weekdays count]; i++) {
         NSString *weekdayValue = (NSString *)[weekdays objectAtIndex:i];
-        UIFont *font = [UIFont fontWithName:@"HelveticaNeue" size:12];
+        UIFont *font = [UIFont fontWithName:@"Yuanti SC" size:12];
         [weekdayValue drawInRect:CGRectMake(i*(kVRGCalendarViewDayWidth+2), 40, kVRGCalendarViewDayWidth+2, 20) withFont:font lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];
     }
     
@@ -475,7 +475,7 @@
                                            [UIColor whiteColor].CGColor);
         }
         
-        [date drawInRect:CGRectMake(targetX+12, targetY+4, kVRGCalendarViewDayWidth, kVRGCalendarViewDayHeight) withFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:8] lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];
+        [date drawInRect:CGRectMake(targetX+12, targetY+4, kVRGCalendarViewDayWidth, kVRGCalendarViewDayHeight) withFont:[UIFont fontWithName:@"Yuanti SC-Bold" size:8] lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];
     }
     
     //    CGContextClosePath(context);
@@ -503,11 +503,14 @@
         int targetColumn = targetBlock%7;
         int targetRow = targetBlock/7;
         
-        int targetX = targetColumn * (kVRGCalendarViewDayWidth+2) + 7;
-        int targetY = kVRGCalendarViewTopBarHeight + targetRow * (kVRGCalendarViewDayHeight+2) + 24;
+        int targetX = targetColumn * (kVRGCalendarViewDayWidth+2) + 2;
+        int targetY = kVRGCalendarViewTopBarHeight + targetRow * (kVRGCalendarViewDayHeight+2) + 12;
         
-        CGRect rectangle = CGRectMake(targetX,targetY,32,15);
+        CGRect rectangle = CGRectMake(targetX,targetY,32,32);
         CGContextAddRect(context, rectangle);
+        
+        //added
+
         
         UIColor *color;
         /*if (selectedDate && selectedDateBlock==targetBlock) {
@@ -518,9 +521,23 @@
             color  = (UIColor *)[markedColors objectAtIndex:i];
        // }
         
+        // Using absolute path... couldn't get it to work in relative path...
+        if(color == [UIColor greenColor]){
+            NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"dot_green" ofType:@"png"];
+            UIImage *myImageObj = [[UIImage alloc] initWithContentsOfFile:imagePath];
+            CGContextDrawImage(context, rectangle, myImageObj.CGImage);
+        }else if(color == [UIColor yellowColor]){
+            NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"dot_yellow" ofType:@"png"];
+            UIImage *myImageObj = [[UIImage alloc] initWithContentsOfFile:imagePath];
+            CGContextDrawImage(context, rectangle, myImageObj.CGImage);
+        }else if(color == [UIColor redColor]){
+            NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"dot_red" ofType:@"png"];
+            UIImage *myImageObj = [[UIImage alloc] initWithContentsOfFile:imagePath];
+            CGContextDrawImage(context, rectangle, myImageObj.CGImage);
+        }else{}
         
-        CGContextSetFillColorWithColor(context, color.CGColor);
-        CGContextFillPath(context);
+        //CGContextSetFillColorWithColor(context, color.CGColor);
+        //CGContextFillPath(context);
     }
 }
 
@@ -548,9 +565,14 @@
         self.labelCurrentMonth = [[UILabel alloc] initWithFrame:CGRectMake(34, 0, kVRGCalendarViewWidth-68, 40)];
         [self addSubview:labelCurrentMonth];
         labelCurrentMonth.backgroundColor=[UIColor whiteColor];
-        labelCurrentMonth.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:17];
+        labelCurrentMonth.font = [UIFont fontWithName:@"Yuanti SC-Bold" size:17];
         labelCurrentMonth.textColor = [UIColor colorWithHexString:@"0x383838"];
         labelCurrentMonth.textAlignment = UITextAlignmentCenter;
+        
+        
+        self.backgroundColor = [UIColor whiteColor];
+        self.animationView_A.backgroundColor = [UIColor whiteColor];
+        self.animationView_B.backgroundColor = [UIColor whiteColor];
         
         [self performSelector:@selector(reset) withObject:nil afterDelay:0.1]; //so delegate can be set after init and still get called on init
         //        [self reset];

@@ -3,6 +3,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Yuanti.ttc">
+            <string>STYuanti-SC-Light</string>
+            <string>STYuanti-SC-Light</string>
+            <string>STYuanti-SC-Light</string>
+            <string>STYuanti-SC-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Today View Controller-->
         <scene sceneID="cwh-vc-ff4">
@@ -19,20 +27,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUR-bQ-BOC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhv-r7-fCJ">
-                                        <rect key="frame" x="8" y="145" width="46" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="JTs-Ip-Idk"/>
-                                            <constraint firstAttribute="width" constant="46" id="VXQ-XA-eZC"/>
-                                        </constraints>
-                                        <state key="normal" title="temp">
-                                            <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="openApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="wEW-Ld-JlV"/>
-                                        </connections>
-                                    </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOA-Dt-dLT">
                                         <rect key="frame" x="262" y="117" width="50" height="50"/>
                                         <constraints>
@@ -48,8 +42,8 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-cb-Gn8">
                                         <rect key="frame" x="122" y="131" width="185" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="17"/>
+                                        <color key="textColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KID-77-Zae">
@@ -93,8 +87,8 @@
                                             <constraint firstAttribute="height" constant="21" id="b9W-Ln-EFb"/>
                                             <constraint firstAttribute="width" constant="88" id="hSq-r5-Pga"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="15"/>
+                                        <color key="textColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current streak: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybj-0m-v9f">
@@ -103,8 +97,8 @@
                                             <constraint firstAttribute="height" constant="21" id="B9i-xm-bbc"/>
                                             <constraint firstAttribute="width" constant="196" id="l5r-p1-Tga"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="15"/>
+                                        <color key="textColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best streak:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POl-zZ-kOO">
@@ -113,21 +107,34 @@
                                             <constraint firstAttribute="height" constant="21" id="6aa-rA-u3d"/>
                                             <constraint firstAttribute="width" constant="196" id="IG6-3R-lK8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="15"/>
+                                        <color key="textColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ez7-Bv-EGY">
+                                        <rect key="frame" x="-259" y="-138" width="500" height="500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="500" id="0QL-k1-4DV"/>
+                                            <constraint firstAttribute="height" constant="500" id="yU4-uA-mpN"/>
+                                        </constraints>
+                                        <state key="normal" image="posi_logo.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="o2W-HF-m4a"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="KID-77-Zae" firstAttribute="leading" secondItem="ehc-8V-bjT" secondAttribute="trailing" id="0e1-BA-yf6"/>
                                     <constraint firstItem="ZDG-XX-BUH" firstAttribute="top" secondItem="JUR-bQ-BOC" secondAttribute="top" constant="8" id="3PM-TI-cWu"/>
+                                    <constraint firstItem="Ez7-Bv-EGY" firstAttribute="top" secondItem="JUR-bQ-BOC" secondAttribute="top" constant="-138" id="4WR-7d-NZr"/>
                                     <constraint firstItem="9wz-bL-LRc" firstAttribute="leading" secondItem="cXp-al-XaO" secondAttribute="trailing" id="5fL-85-1mO"/>
                                     <constraint firstAttribute="trailing" secondItem="SOA-Dt-dLT" secondAttribute="trailing" constant="8" id="8zp-Il-bvZ"/>
                                     <constraint firstAttribute="trailing" secondItem="KID-77-Zae" secondAttribute="trailing" constant="8" id="9zb-Br-wCD"/>
-                                    <constraint firstItem="Xhv-r7-fCJ" firstAttribute="leading" secondItem="JUR-bQ-BOC" secondAttribute="leading" constant="8" id="GNC-EW-Ic3"/>
+                                    <constraint firstItem="Ez7-Bv-EGY" firstAttribute="leading" secondItem="JUR-bQ-BOC" secondAttribute="leading" constant="-259" id="FRn-oa-lvU"/>
                                     <constraint firstAttribute="trailing" secondItem="POl-zZ-kOO" secondAttribute="trailing" constant="8" id="Kqr-Ec-D7l"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xhv-r7-fCJ" secondAttribute="bottom" id="Owi-Ze-h4v"/>
                                     <constraint firstItem="cXp-al-XaO" firstAttribute="leading" secondItem="ZDG-XX-BUH" secondAttribute="trailing" id="Ug9-TS-EPR"/>
                                     <constraint firstItem="1sI-AC-osC" firstAttribute="top" secondItem="JUR-bQ-BOC" secondAttribute="top" constant="8" id="Wso-B2-UOs"/>
                                     <constraint firstItem="cXp-al-XaO" firstAttribute="top" secondItem="JUR-bQ-BOC" secondAttribute="top" constant="8" id="Xez-w0-12n"/>
@@ -176,6 +183,7 @@
     </scenes>
     <resources>
         <image name="dot_green.png" width="49" height="49"/>
+        <image name="posi_logo.png" width="700" height="700"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

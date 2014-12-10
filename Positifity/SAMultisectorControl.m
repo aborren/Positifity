@@ -34,7 +34,7 @@ typedef struct{
     CGFloat endMarkerRadius;
     
     CGFloat startMarkerFontSize;
-    CGFloat endMarkerFontize;
+    CGFloat endMarkerFontSize;
     
     CGFloat startMarkerAlpha;
     CGFloat endMarkerAlpha;
@@ -302,13 +302,13 @@ typedef struct{
     
     //drawing start marker's text
     [self drawString:startMarkerStr
-            withFont:[UIFont boldSystemFontOfSize:drawInf.startMarkerFontSize]
+            withFont:[UIFont fontWithName:@"Yuanti SC" size:drawInf.startMarkerFontSize]
                color:[circleColor colorWithAlphaComponent:drawInf.startMarkerAlpha]
           withCenter:drawInf.startMarkerCenter];
     
     //drawing end marker's text
     [self drawString:endMarkerStr
-            withFont:[UIFont boldSystemFontOfSize:drawInf.endMarkerFontize]
+            withFont:[UIFont fontWithName:@"Yuanti SC" size:drawInf.endMarkerFontSize]
                color:[circleColor colorWithAlphaComponent:drawInf.endMarkerAlpha]
           withCenter:drawInf.endMarkerCenter];
 }
@@ -333,17 +333,17 @@ typedef struct{
     drawInf.startMarkerCenter = polarToDecart(drawInf.circleCenter, drawInf.radius, drawInf.circleOffsetAngle);
     drawInf.endMarkerCenter = polarToDecart(drawInf.circleCenter, drawInf.radius, drawInf.circleLineAngle);
     
-    CGFloat minMarkerRadius = self.sectorsRadius / 8.0;
-    CGFloat maxMarkerRadius = self.sectorsRadius / 4.0;
+    CGFloat minMarkerRadius = self.sectorsRadius / 5.0;
+    CGFloat maxMarkerRadius = self.sectorsRadius / 5.0;
     
     drawInf.startMarkerRadius = ((drawInf.circleOffsetAngle/(self.startAngle + 2*M_PI)) * (maxMarkerRadius - minMarkerRadius)) + minMarkerRadius;
     drawInf.endMarkerRadius = ((drawInf.circleLineAngle/(self.startAngle + 2*M_PI)) * (maxMarkerRadius - minMarkerRadius)) + minMarkerRadius;
     
-    CGFloat minFontSize = 12.0;
+    CGFloat minFontSize = 18.0;
     CGFloat maxFontSize = 18.0;
     
     drawInf.startMarkerFontSize = ((drawInf.circleOffset/drawInf.fullLine) * (maxFontSize - minFontSize)) + minFontSize;
-    drawInf.endMarkerFontize = ((drawInf.circleLine/drawInf.fullLine) * (maxFontSize - minFontSize)) + minFontSize;
+    drawInf.endMarkerFontSize = ((drawInf.circleLine/drawInf.fullLine) * (maxFontSize - minFontSize)) + minFontSize;
     
     CGFloat markersCentresSegmentLength = segmentLength(drawInf.startMarkerCenter, drawInf.endMarkerCenter);
     CGFloat markersRadiusSumm = drawInf.startMarkerRadius + drawInf.endMarkerRadius;

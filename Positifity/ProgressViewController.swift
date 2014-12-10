@@ -11,7 +11,6 @@ import HealthKit
 
 class ProgressViewController: UIViewController {
 
-    @IBOutlet var currentWeight: UILabel!
     @IBOutlet var goalWeightLabel: UILabel!
     @IBOutlet var circle: SAMultisectorControl!
     @IBOutlet var descriptionLabel: UILabel!
@@ -61,7 +60,7 @@ class ProgressViewController: UIViewController {
             sector.startValue = -startWeight
         }else if(weightLoss < 0){
             if(startWeight >= currentWeight){
-                startWeight = currentWeight + 0.01 //fulhack för sector..
+                startWeight = currentWeight - 0.01 //fulhack för sector..
             }
             sector = SAMultisectorSector(color: UIColor(hexString: "009dd0"), minValue: startWeight, maxValue: goalWeight)
             sector.endValue = currentWeight
