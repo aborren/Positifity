@@ -32,17 +32,31 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     //Setup UI
     func setupUI(){
         if(self.isDayMarked()){
-            self.textLabel.text = "POSITIVE QUOTE"
-            self.greenBtn.hidden = true
+            setQuoteLabel()
+            hideAllButtons()
         }else{
-            self.textLabel.text = "Click it if you progressed!"
-            self.greenBtn.hidden = false
+            dismissQuoteLabel()
+            showAllButtons()
         }
         
         markLastFiveDays()
         
         self.currentStreakLabel.text = "Current streak: \(calculateCurrentStreak()) days"
-        self.bestStreakLabel.text = "Best streak: \(calculateBestStreak()) (TODO)"
+        self.bestStreakLabel.text = "Best streak: \(calculateBestStreak()) days"
+    }
+    
+    func setQuoteLabel(){
+        self.quoteLabelHeight.constant = 90
+        if(UIScreen.mainScreen().bounds.width > 320){
+            self.quoteLabelWidth.constant = 240
+        }
+        self.textLabel.text = Quotes.randomQuote()
+    }
+    
+    func dismissQuoteLabel(){
+        self.quoteLabelHeight.constant = 32
+        self.quoteLabelWidth.constant = 196
+        self.textLabel.text = "How well did you do today?"
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,6 +81,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     //outlets
     @IBOutlet var textLabel: UILabel!
     @IBOutlet var greenBtn: UIButton!
+    @IBOutlet var yellowBtn: UIButton!
+    @IBOutlet var redBtn: UIButton!
+    @IBOutlet var quoteLabelHeight: NSLayoutConstraint!
+    @IBOutlet var quoteLabelWidth: NSLayoutConstraint!
     
     @IBOutlet var day1Image: UIImageView!
     @IBOutlet var day2Image: UIImageView!
@@ -77,20 +95,43 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet var currentStreakLabel: UILabel!
     @IBOutlet var bestStreakLabel: UILabel!
     
-    @IBAction func greenBtnClick(sender: AnyObject) {
-        //kanske om man vill skriva nåt från NSDEF
-        /*var d = NSUserDefaults(suiteName: "group.dna.positifity")?.doubleForKey("test")
-        NSUserDefaults(suiteName: "group.dna.positifity")?.setDouble(d!+1.0, forKey: "test")
-        TestLabel.text = NSUserDefaults(suiteName: "group.dna.positifity")?.doubleForKey("test").description*/
-
-        let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: NSDate(), markedAs: "green")
-        self.managedObjectContext?.save(nil)
-
-        greenBtn.hidden = true
-        setupUI()
+    @IBAction func BtnClick(sender: AnyObject) {
+        var color: String?
+        if(sender as UIButton == greenBtn){
+            color = "green"
+        }else if(sender as UIButton == yellowBtn){
+            color = "yellow"
+        }else if(sender as UIButton == redBtn){
+            color = "red"
+        }
+        if let c = color {/*
+            NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+            NSDateComponents *comps = [gregorian components:NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay fromDate:self.currentMonth];
+            [comps setDay:date];
+            self.selectedDate = [gregorian dateFromComponents:comps];*/
+            
+            let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+            let components = calendar.components(NSCalendarUnit.YearCalendarUnit | NSCalendarUnit.MonthCalendarUnit | NSCalendarUnit.DayCalendarUnit, fromDate: NSDate())
+            let date = calendar.dateFromComponents(components)!
+            let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: date, markedAs: c)
+            self.managedObjectContext?.save(nil)
+            hideAllButtons()
+            setupUI()
+        }
     }
     
-  
+    func hideAllButtons(){
+        self.greenBtn.hidden = true
+        self.yellowBtn.hidden = true
+        self.redBtn.hidden = true
+    }
+    
+    func showAllButtons(){
+        self.greenBtn.hidden = false
+        self.yellowBtn.hidden = false
+        self.redBtn.hidden = false
+    }
+    
     // Opens main application
     @IBAction func openApp(sender: AnyObject) {
         let url = NSURL(string: "positifity://")
@@ -150,7 +191,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     //Might be slow on high streaks due to CoreData access
     func calculateCurrentStreak()->Int{
-        var date = NSDate()
+        /*var date = NSDate()
         let timeIntervalInSecondsForOneDay: Double = 60*60*24
         
         var streak: Int = 0
@@ -162,11 +203,88 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         //check max streak?
         
+        return streak*/
+        
+        
+        
+        //
+        let currentDate = NSDate()
+        let fetchRequest = NSFetchRequest(entityName: "MarkedDate")
+        let predicate = NSPredicate(format: "date < %@", currentDate)
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let timeIntervalInSecondsForOneDay: Double = 60*60*25//DST!
+        var streak: Int = 0
+        var lastMarkedDay: NSDate?
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [MarkedDate] {
+            for f in fetchResults{
+                if(lastMarkedDay == nil){
+                    if(f.markedAs != "green"){
+                        return streak
+                    }else{
+                        streak++
+                        lastMarkedDay = f.date
+                    }
+                }else{
+                    if(f.markedAs == "green"){
+                        if(lastMarkedDay!.timeIntervalSinceDate(f.date) <= timeIntervalInSecondsForOneDay){
+                            streak++
+                            lastMarkedDay = f.date
+                        }else{
+                            return streak
+                        }
+                    }else {
+                        return streak
+                    }
+                }
+            }
+        }
         return streak
     }
     
     func calculateBestStreak()->Int{
-        return 0
+        let currentDate = NSDate()
+        let fetchRequest = NSFetchRequest(entityName: "MarkedDate")
+        let predicate = NSPredicate(format: "date < %@", currentDate)
+        fetchRequest.predicate = predicate
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let timeIntervalInSecondsForOneDay: Double = 60*60*25 //DST!
+        var maxStreak: Int = 0
+        var streak: Int = 0
+        var lastGreenMarkedDay: NSDate?
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [MarkedDate] {
+            for f in fetchResults{
+                if(lastGreenMarkedDay==nil){
+                    //körs till första gången vi stöter på grönmarkerad dag
+                    if(f.markedAs == "green"){
+                        lastGreenMarkedDay = f.date
+                        streak = 1
+                        if(streak > maxStreak){
+                            maxStreak = streak
+                        }
+                    }
+                }else{
+                    //nu har vi en grönmarkerad dag
+                    if(f.markedAs == "green"){
+                        if(f.date.timeIntervalSinceDate(lastGreenMarkedDay!) <= timeIntervalInSecondsForOneDay){
+                            streak += 1
+                            if(streak > maxStreak){
+                                maxStreak = streak
+                            }
+                        }else{
+                            streak = 1
+                        }
+                        lastGreenMarkedDay = f.date
+                    }else {
+                        streak = 0
+                    }
+                }
+            }
+        }
+        return maxStreak
     }
     
     func drawCircleOnImageView(imageView: UIImageView, color: String){
@@ -177,7 +295,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }else if(color == "red"){
             imageView.image = UIImage(named: "dot_red.png")
         }else{
-            //imageView.image = UIImage(named: "posi_logo.png")
+            imageView.image = UIImage(named: "gray_dot.png")
         }
     }    
 }

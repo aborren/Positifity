@@ -37,6 +37,12 @@
 		B2C6C0A119FFE3E000A336D0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C6C0A019FFE3E000A336D0 /* MainInterface.storyboard */; };
 		B2C6C0A419FFE3E000A336D0 /* PositifityWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B2C6C09719FFE3E000A336D0 /* PositifityWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B2C6C0AA19FFF13200A336D0 /* Positifity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */; };
+		B2C8F9711A39CCDD00AFEA3C /* posicircle.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C8F9701A39CCDD00AFEA3C /* posicircle.png */; };
+		B2C8F9721A39CCDD00AFEA3C /* posicircle.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C8F9701A39CCDD00AFEA3C /* posicircle.png */; };
+		B2C8F9741A39EADB00AFEA3C /* gray_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C8F9731A39EADB00AFEA3C /* gray_dot.png */; };
+		B2C8F9751A39EADB00AFEA3C /* gray_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C8F9731A39EADB00AFEA3C /* gray_dot.png */; };
+		B2C8F9771A39F0B300AFEA3C /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8F9761A39F0B300AFEA3C /* Quotes.swift */; };
+		B2C8F9781A39F0B300AFEA3C /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8F9761A39F0B300AFEA3C /* Quotes.swift */; };
 		B2C91FAF1A25E5F700CA6D47 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C91FAE1A25E5F700CA6D47 /* HelperFunctions.swift */; };
 		B2C91FB11A25FFBF00CA6D47 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C91FB01A25FFBF00CA6D47 /* CoreDataStack.swift */; };
 		B2C91FB21A26091500CA6D47 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C91FB01A25FFBF00CA6D47 /* CoreDataStack.swift */; };
@@ -133,6 +139,9 @@
 		B2C6C09E19FFE3E000A336D0 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		B2C6C0A019FFE3E000A336D0 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		B2C6C0A919FFE5A100A336D0 /* PositifityWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PositifityWidget.entitlements; sourceTree = "<group>"; };
+		B2C8F9701A39CCDD00AFEA3C /* posicircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = posicircle.png; sourceTree = "<group>"; };
+		B2C8F9731A39EADB00AFEA3C /* gray_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_dot.png; sourceTree = "<group>"; };
+		B2C8F9761A39F0B300AFEA3C /* Quotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		B2C91FAE1A25E5F700CA6D47 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		B2C91FB01A25FFBF00CA6D47 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B2C91FB81A26370B00CA6D47 /* month_view-25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "month_view-25@2x.png"; sourceTree = "<group>"; };
@@ -201,10 +210,12 @@
 				B2CC1DA11A150A83001D3902 /* dot_yellow.png */,
 				B2CC1DA21A150A83001D3902 /* dot_red.png */,
 				B2CC1DA31A150A83001D3902 /* dot_green.png */,
+				B2C8F9731A39EADB00AFEA3C /* gray_dot.png */,
 				B2C91FB81A26370B00CA6D47 /* month_view-25@2x.png */,
 				B2C91FB91A26370B00CA6D47 /* month_view-25.png */,
 				B2C91FBC1A2637C000CA6D47 /* full_moon-25@2x.png */,
 				B2C91FBD1A2637C000CA6D47 /* full_moon-25.png */,
+				B2C8F9701A39CCDD00AFEA3C /* posicircle.png */,
 				B2CF59131A09138F00BB7C5B /* posi_logo.png */,
 				B268583519F3E4AB006AEF8D /* Positifity.entitlements */,
 				B2439CA819F2E86700D33D4C /* circlecontrol */,
@@ -308,6 +319,7 @@
 				B2C6C09E19FFE3E000A336D0 /* TodayViewController.swift */,
 				B2C6C0A019FFE3E000A336D0 /* MainInterface.storyboard */,
 				B2C6C09C19FFE3E000A336D0 /* Supporting Files */,
+				B2C8F9761A39F0B300AFEA3C /* Quotes.swift */,
 			);
 			path = PositifityWidget;
 			sourceTree = "<group>";
@@ -439,11 +451,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C8F9741A39EADB00AFEA3C /* gray_dot.png in Resources */,
 				B2CF59141A09138F00BB7C5B /* posi_logo.png in Resources */,
 				B2CC1DA41A150A83001D3902 /* dot_yellow.png in Resources */,
 				B2C91FBB1A26370B00CA6D47 /* month_view-25.png in Resources */,
 				B2439C6719F29E0800D33D4C /* Main.storyboard in Resources */,
 				B2CC1DA61A150A83001D3902 /* dot_red.png in Resources */,
+				B2C8F9711A39CCDD00AFEA3C /* posicircle.png in Resources */,
 				B2C91FBF1A2637C000CA6D47 /* full_moon-25.png in Resources */,
 				B2439C6C19F29E0800D33D4C /* LaunchScreen.xib in Resources */,
 				B2C91FBA1A26370B00CA6D47 /* month_view-25@2x.png in Resources */,
@@ -466,11 +480,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CC1DA91A150A83001D3902 /* dot_green.png in Resources */,
+				B2C8F9751A39EADB00AFEA3C /* gray_dot.png in Resources */,
 				B2CC1D9E1A14FD4B001D3902 /* Positifity.xcdatamodeld in Resources */,
 				B2CC1DA51A150A83001D3902 /* dot_yellow.png in Resources */,
 				B2C6C0A119FFE3E000A336D0 /* MainInterface.storyboard in Resources */,
 				B2C9928A1A3873EC0078E4EE /* Yuanti.ttc in Resources */,
 				B2CC1DA71A150A83001D3902 /* dot_red.png in Resources */,
+				B2C8F9721A39CCDD00AFEA3C /* posicircle.png in Resources */,
 				B2C91FB51A2612A200CA6D47 /* posi_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +514,7 @@
 				B2439C6419F29E0800D33D4C /* CalendarViewController.swift in Sources */,
 				B2439C9519F2B8E600D33D4C /* CalendarUtility.swift in Sources */,
 				B2439C5F19F29E0800D33D4C /* AppDelegate.swift in Sources */,
+				B2C8F9771A39F0B300AFEA3C /* Quotes.swift in Sources */,
 				B2439C6219F29E0800D33D4C /* Positifity.xcdatamodeld in Sources */,
 				B2439CA219F2C0A600D33D4C /* UIView+convenience.m in Sources */,
 				B2439C9119F2ACCD00D33D4C /* MarkedDate.swift in Sources */,
@@ -520,6 +537,7 @@
 			files = (
 				B2C91FB21A26091500CA6D47 /* CoreDataStack.swift in Sources */,
 				B24916D01A1A596300E11D68 /* CalendarUtility.swift in Sources */,
+				B2C8F9781A39F0B300AFEA3C /* Quotes.swift in Sources */,
 				B2CC1DA01A1503CC001D3902 /* MarkedDate.swift in Sources */,
 				B2C6C09F19FFE3E000A336D0 /* TodayViewController.swift in Sources */,
 				B2C6C0AA19FFF13200A336D0 /* Positifity.xcdatamodeld in Sources */,
