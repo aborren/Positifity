@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -40,12 +41,6 @@
                                             <action selector="greenBtnClick:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="EzA-u5-KZQ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-cb-Gn8">
-                                        <rect key="frame" x="122" y="131" width="185" height="21"/>
-                                        <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="17"/>
-                                        <color key="textColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KID-77-Zae">
                                         <rect key="frame" x="291" y="8" width="21" height="21"/>
                                         <constraints>
@@ -92,7 +87,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current streak: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybj-0m-v9f">
-                                        <rect key="frame" x="116" y="37" width="196" height="21"/>
+                                        <rect key="frame" x="116" y="29" width="196" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="B9i-xm-bbc"/>
                                             <constraint firstAttribute="width" constant="196" id="l5r-p1-Tga"/>
@@ -102,7 +97,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best streak:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POl-zZ-kOO">
-                                        <rect key="frame" x="116" y="66" width="196" height="21"/>
+                                        <rect key="frame" x="116" y="50" width="196" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="6aa-rA-u3d"/>
                                             <constraint firstAttribute="width" constant="196" id="IG6-3R-lK8"/>
@@ -124,6 +119,12 @@
                                             <action selector="openApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="o2W-HF-m4a"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How well did you do today?" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-cb-Gn8">
+                                        <rect key="frame" x="116" y="77" width="196" height="32"/>
+                                        <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
+                                        <color key="textColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -140,8 +141,8 @@
                                     <constraint firstItem="cXp-al-XaO" firstAttribute="top" secondItem="JUR-bQ-BOC" secondAttribute="top" constant="8" id="Xez-w0-12n"/>
                                     <constraint firstItem="ehc-8V-bjT" firstAttribute="leading" secondItem="9wz-bL-LRc" secondAttribute="trailing" id="YFK-kb-fUs"/>
                                     <constraint firstItem="9wz-bL-LRc" firstAttribute="top" secondItem="JUR-bQ-BOC" secondAttribute="top" constant="8" id="YH0-Fr-QkP"/>
-                                    <constraint firstItem="ybj-0m-v9f" firstAttribute="top" secondItem="1sI-AC-osC" secondAttribute="bottom" constant="8" id="b2w-ZI-wGe"/>
-                                    <constraint firstItem="POl-zZ-kOO" firstAttribute="top" secondItem="ybj-0m-v9f" secondAttribute="bottom" constant="8" id="dJw-gP-yQk"/>
+                                    <constraint firstItem="ybj-0m-v9f" firstAttribute="top" secondItem="1sI-AC-osC" secondAttribute="bottom" id="b2w-ZI-wGe"/>
+                                    <constraint firstItem="POl-zZ-kOO" firstAttribute="top" secondItem="ybj-0m-v9f" secondAttribute="bottom" id="dJw-gP-yQk"/>
                                     <constraint firstAttribute="bottom" secondItem="SOA-Dt-dLT" secondAttribute="bottom" constant="8" id="gON-ln-NH1"/>
                                     <constraint firstAttribute="trailing" secondItem="ybj-0m-v9f" secondAttribute="trailing" constant="8" id="gpD-Gq-D8M"/>
                                     <constraint firstItem="ehc-8V-bjT" firstAttribute="top" secondItem="JUR-bQ-BOC" secondAttribute="top" constant="8" id="hEt-yV-Tys"/>

@@ -32,6 +32,7 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
     //Button outlets
     @IBOutlet var calendarViewHeight: NSLayoutConstraint!
     
+    @IBOutlet var bottomLabel: UILabel!
     @IBOutlet var calView: VRGCalendarView!
     @IBOutlet var greenBtn: UIButton!
     @IBOutlet var yellowBtn: UIButton!
@@ -133,12 +134,21 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
     }
     
     func calendarView(calendarView: VRGCalendarView!, switchedToMonth month: Int32, targetHeight: Float, animated: Bool) {
-        self.calendarViewHeight.constant = CGFloat(targetHeight)
-        //calendar.reloadInputViews()
+        //ensure smooth transition of calview
+        var updateViewDelay: Double = 0
+        if(calendarViewHeight.constant < CGFloat(targetHeight)){
+            updateViewDelay = 0.35
+        }
+        NSTimer.scheduledTimerWithTimeInterval(updateViewDelay, target: self, selector: "updateCalendarViewHeight:", userInfo: targetHeight, repeats: false)
+        
         markCalendarWithCoreData()
     }
     
     //
+    func updateCalendarViewHeight(timer: NSTimer){
+        self.calendarViewHeight.constant = CGFloat(timer.userInfo as Float)
+    }
+    
     func markCalendarWithCoreData(){
         let year = NSCalendar.currentCalendar().component(NSCalendarUnit.YearCalendarUnit, fromDate: calendar.currentMonth)
         let month = NSCalendar.currentCalendar().component(NSCalendarUnit.MonthCalendarUnit, fromDate: calendar.currentMonth)

@@ -121,14 +121,27 @@ class ProgressViewController: UIViewController {
     
     func transition(){
         setupAnimation()
-        if(self.goalWeightLabel.text == goalWeight.description){
+        if(self.goalWeightLabel.text == goalWeight.description + currentWeightUnitAbbrevation()){
             self.descriptionLabel.text = "Progress"
             self.goalWeightLabel.text = NSString(format: "%.0f", goalPercentage) + "%"
         }
         else{
             self.descriptionLabel.text = "Goal weight"
-            self.goalWeightLabel.text = goalWeight.description
+            self.goalWeightLabel.text = goalWeight.description + currentWeightUnitAbbrevation()
         }
+    }
+    
+    func currentWeightUnitAbbrevation()->String{
+        if let weightUnit = NSUserDefaults.standardUserDefaults().stringForKey("weightUnit"){
+            if(weightUnit == "Pounds"){
+               return "lb"
+            }else if(weightUnit == "Stones"){
+                return "st"
+            }else{
+                return "kg"
+            }
+        }
+        return ""
     }
     
     @IBAction func unwindToSegue (segue : UIStoryboardSegue) {

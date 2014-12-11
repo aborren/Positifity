@@ -30,45 +30,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHX-FY-NxY">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="15"/>
-                                <state key="normal" title="Green">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="95" y="490" width="41" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="greenBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1jj-Fz-hOy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcv-DS-6QH">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="15"/>
-                                <state key="normal" title="Yellow">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="177" y="490" width="43" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="yellowBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L3j-dW-HsE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOT-AX-edV">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="15"/>
-                                <state key="normal" title="Red">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="265" y="490" width="30" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="redBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Joh-eh-ZKV"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQK-XT-sQg" customClass="VRGCalendarView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.52375114050000005" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,57 +47,156 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How well did you do this day?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyy-Ob-UKy">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHX-FY-NxY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="dQc-P8-YBa"/>
+                                    <constraint firstAttribute="height" constant="30" id="gh2-Yc-j0n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="20"/>
+                                <color key="tintColor" red="0.37254901959999998" green="0.68627450980000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Great!">
+                                    <color key="titleColor" red="0.37254901960784315" green="0.68627450980392157" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dQc-P8-YBa"/>
+                                        <exclude reference="gh2-Yc-j0n"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dQc-P8-YBa"/>
+                                        <include reference="gh2-Yc-j0n"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="greenBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1jj-Fz-hOy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcv-DS-6QH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="MxB-zg-x1s"/>
+                                    <constraint firstAttribute="height" constant="30" id="eiC-xT-ocH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="20"/>
+                                <color key="tintColor" red="0.87055638229999999" green="0.77844149269999996" blue="0.1687271951" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Okay">
+                                    <color key="titleColor" red="0.87055638227513232" green="0.77844149269931484" blue="0.16872719514046405" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MxB-zg-x1s"/>
+                                        <exclude reference="eiC-xT-ocH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="MxB-zg-x1s"/>
+                                        <include reference="eiC-xT-ocH"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="yellowBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L3j-dW-HsE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOT-AX-edV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Why-e0-NhD"/>
+                                    <constraint firstAttribute="width" constant="80" id="jmp-2g-KNy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="20"/>
+                                <color key="tintColor" red="0.79607843140000001" green="0.19215686269999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Bad">
+                                    <color key="titleColor" red="0.79607843137254897" green="0.19215686274509805" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Why-e0-NhD"/>
+                                        <exclude reference="jmp-2g-KNy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Why-e0-NhD"/>
+                                        <include reference="jmp-2g-KNy"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="redBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Joh-eh-ZKV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nQK-XT-sQg" secondAttribute="trailing" id="0BA-Q5-f7I"/>
-                            <constraint firstAttribute="centerX" secondItem="hcv-DS-6QH" secondAttribute="centerX" constant="2" id="6Kf-0d-F20"/>
-                            <constraint firstItem="hOT-AX-edV" firstAttribute="leading" secondItem="hcv-DS-6QH" secondAttribute="trailing" constant="45" id="HoZ-oh-NjW"/>
-                            <constraint firstItem="hcv-DS-6QH" firstAttribute="leading" secondItem="dHX-FY-NxY" secondAttribute="trailing" constant="41" id="VU7-6r-vsS"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hcv-DS-6QH" secondAttribute="bottom" constant="31" id="aX2-pf-QkI"/>
+                            <constraint firstItem="hcv-DS-6QH" firstAttribute="top" secondItem="Kyy-Ob-UKy" secondAttribute="bottom" constant="8" id="1t6-za-7oQ"/>
+                            <constraint firstItem="hcv-DS-6QH" firstAttribute="leading" secondItem="dHX-FY-NxY" secondAttribute="trailing" constant="8" id="NID-iY-XHh"/>
+                            <constraint firstItem="dHX-FY-NxY" firstAttribute="baseline" secondItem="hcv-DS-6QH" secondAttribute="baseline" id="OFP-Lh-SfZ"/>
+                            <constraint firstItem="Kyy-Ob-UKy" firstAttribute="centerX" secondItem="hcv-DS-6QH" secondAttribute="centerX" id="VxS-dB-EIk"/>
+                            <constraint firstAttribute="centerX" secondItem="hcv-DS-6QH" secondAttribute="centerX" id="Z3z-OS-n6G"/>
+                            <constraint firstItem="hOT-AX-edV" firstAttribute="leading" secondItem="hcv-DS-6QH" secondAttribute="trailing" constant="8" id="bgh-1d-Qn0"/>
+                            <constraint firstAttribute="centerY" secondItem="hcv-DS-6QH" secondAttribute="centerY" id="gLy-cg-oca">
+                                <variation key="widthClass=compact" constant="-182"/>
+                            </constraint>
                             <constraint firstItem="nQK-XT-sQg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lJZ-jV-OZ2"/>
                             <constraint firstAttribute="centerY" secondItem="nQK-XT-sQg" secondAttribute="top" constant="80" id="nww-6j-Wz5">
-                                <variation key="widthClass=compact" constant="205.5"/>
+                                <variation key="widthClass=compact" constant="200.5"/>
                             </constraint>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hOT-AX-edV" secondAttribute="bottom" constant="31" id="uYN-vG-GZX"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dHX-FY-NxY" secondAttribute="bottom" constant="31" id="wAg-aA-Y3R"/>
+                            <constraint firstItem="hcv-DS-6QH" firstAttribute="baseline" secondItem="hOT-AX-edV" secondAttribute="baseline" id="xQD-xF-0f0"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="nQK-XT-sQg"/>
+                                <exclude reference="Kyy-Ob-UKy"/>
                                 <exclude reference="dHX-FY-NxY"/>
                                 <exclude reference="hcv-DS-6QH"/>
                                 <exclude reference="hOT-AX-edV"/>
-                                <exclude reference="nQK-XT-sQg"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="aX2-pf-QkI"/>
-                                <exclude reference="uYN-vG-GZX"/>
-                                <exclude reference="wAg-aA-Y3R"/>
-                                <exclude reference="HoZ-oh-NjW"/>
-                                <exclude reference="6Kf-0d-F20"/>
-                                <exclude reference="VU7-6r-vsS"/>
                                 <exclude reference="0BA-Q5-f7I"/>
                                 <exclude reference="lJZ-jV-OZ2"/>
                                 <exclude reference="nww-6j-Wz5"/>
+                                <exclude reference="VxS-dB-EIk"/>
+                                <exclude reference="OFP-Lh-SfZ"/>
+                                <exclude reference="1t6-za-7oQ"/>
+                                <exclude reference="NID-iY-XHh"/>
+                                <exclude reference="Z3z-OS-n6G"/>
+                                <exclude reference="gLy-cg-oca"/>
+                                <exclude reference="xQD-xF-0f0"/>
+                                <exclude reference="bgh-1d-Qn0"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="nQK-XT-sQg"/>
+                                <include reference="Kyy-Ob-UKy"/>
                                 <include reference="dHX-FY-NxY"/>
                                 <include reference="hcv-DS-6QH"/>
                                 <include reference="hOT-AX-edV"/>
-                                <include reference="nQK-XT-sQg"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="aX2-pf-QkI"/>
-                                <include reference="uYN-vG-GZX"/>
-                                <include reference="wAg-aA-Y3R"/>
-                                <include reference="HoZ-oh-NjW"/>
-                                <include reference="6Kf-0d-F20"/>
-                                <include reference="VU7-6r-vsS"/>
                                 <include reference="0BA-Q5-f7I"/>
                                 <include reference="lJZ-jV-OZ2"/>
                                 <include reference="nww-6j-Wz5"/>
+                                <include reference="VxS-dB-EIk"/>
+                                <include reference="OFP-Lh-SfZ"/>
+                                <include reference="1t6-za-7oQ"/>
+                                <include reference="NID-iY-XHh"/>
+                                <include reference="Z3z-OS-n6G"/>
+                                <include reference="gLy-cg-oca"/>
+                                <include reference="xQD-xF-0f0"/>
+                                <include reference="bgh-1d-Qn0"/>
                             </mask>
                         </variation>
                     </view>
@@ -144,6 +204,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="bottomLabel" destination="Kyy-Ob-UKy" id="lXh-1P-IPv"/>
                         <outlet property="calView" destination="nQK-XT-sQg" id="NO9-dR-vE1"/>
                         <outlet property="calendarViewHeight" destination="WpO-PY-sZ5" id="Mix-kM-LiA"/>
                         <outlet property="greenBtn" destination="dHX-FY-NxY" id="ebZ-nx-v8c"/>
@@ -256,42 +317,31 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPg-Wb-e1X">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tlM-mo-nYj"/>
+                                    <constraint firstAttribute="width" constant="130" id="vT3-gE-CSh">
+                                        <variation key="widthClass=compact" constant="131"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="20"/>
                                 <state key="normal" title="Update Weight">
                                     <color key="titleColor" red="0.0" green="0.61568627450000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="110" y="388" width="100" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="RBN-6d-cPm" kind="show" id="aTJ-64-Gfw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRC-9b-gCp">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="YT3-rP-vkJ"/>
-                                    <constraint firstAttribute="height" constant="22" id="qIL-yD-ctk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="15"/>
-                                <state key="normal" title="Setting">
-                                    <color key="titleColor" red="0.0" green="0.61568627450000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="YT3-rP-vkJ"/>
-                                        <exclude reference="qIL-yD-ctk"/>
+                                        <exclude reference="tlM-mo-nYj"/>
+                                        <exclude reference="vT3-gE-CSh"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="YT3-rP-vkJ"/>
-                                        <include reference="qIL-yD-ctk"/>
+                                        <include reference="tlM-mo-nYj"/>
+                                        <include reference="vT3-gE-CSh"/>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="lnD-uZ-uzV" kind="show" id="Rzk-zz-Prz"/>
+                                    <segue destination="RBN-6d-cPm" kind="show" id="aTJ-64-Gfw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -299,22 +349,21 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="eu6-tr-Bh1" secondAttribute="trailing" id="2WZ-Jh-GUw"/>
                             <constraint firstAttribute="centerX" secondItem="eu6-tr-Bh1" secondAttribute="centerX" id="8GP-mh-beQ"/>
-                            <constraint firstItem="cPg-Wb-e1X" firstAttribute="top" secondItem="eu6-tr-Bh1" secondAttribute="bottom" constant="18" id="Jyu-6R-Pei"/>
-                            <constraint firstAttribute="centerY" secondItem="eu6-tr-Bh1" secondAttribute="centerY" constant="50" id="O7e-Cw-fce"/>
-                            <constraint firstAttribute="trailing" secondItem="QRC-9b-gCp" secondAttribute="trailing" id="OFd-Cd-D6j"/>
+                            <constraint firstItem="cPg-Wb-e1X" firstAttribute="top" secondItem="eu6-tr-Bh1" secondAttribute="bottom" constant="22" id="Jyu-6R-Pei">
+                                <variation key="widthClass=compact" constant="13"/>
+                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="eu6-tr-Bh1" secondAttribute="centerY" constant="50" id="O7e-Cw-fce">
+                                <variation key="widthClass=compact" constant="44.5"/>
+                            </constraint>
                             <constraint firstItem="eu6-tr-Bh1" firstAttribute="leading" secondItem="Exg-CV-tgV" secondAttribute="leading" id="PNy-GU-ipn"/>
-                            <constraint firstItem="QRC-9b-gCp" firstAttribute="top" secondItem="eu6-tr-Bh1" secondAttribute="bottom" constant="22" id="Vxe-UF-tA6"/>
                             <constraint firstItem="cPg-Wb-e1X" firstAttribute="centerX" secondItem="eu6-tr-Bh1" secondAttribute="centerX" id="v3i-TY-2Ru"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="eu6-tr-Bh1"/>
                                 <exclude reference="cPg-Wb-e1X"/>
-                                <exclude reference="QRC-9b-gCp"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="OFd-Cd-D6j"/>
-                                <exclude reference="Vxe-UF-tA6"/>
                                 <exclude reference="Jyu-6R-Pei"/>
                                 <exclude reference="v3i-TY-2Ru"/>
                                 <exclude reference="2WZ-Jh-GUw"/>
@@ -327,11 +376,8 @@
                             <mask key="subviews">
                                 <include reference="eu6-tr-Bh1"/>
                                 <include reference="cPg-Wb-e1X"/>
-                                <include reference="QRC-9b-gCp"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="OFd-Cd-D6j"/>
-                                <include reference="Vxe-UF-tA6"/>
                                 <include reference="Jyu-6R-Pei"/>
                                 <include reference="v3i-TY-2Ru"/>
                                 <include reference="2WZ-Jh-GUw"/>
@@ -362,7 +408,7 @@
                         <viewControllerLayoutGuide type="bottom" id="VIp-ow-T7A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Jn9-du-Igf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR3-fE-5fG">
