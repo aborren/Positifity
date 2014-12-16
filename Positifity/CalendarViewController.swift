@@ -83,7 +83,8 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
 
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [MarkedDate] {
             for m in fetchResults {
-                let day = NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: m.date)
+                let components = NSCalendar.currentCalendar().components(NSCalendarUnit.DayCalendarUnit, fromDate: m.date)
+                let day = components.day
                 var color = UIColor()
                 if(m.markedAs == "green"){
                     color = UIColor.greenColor()
@@ -99,8 +100,10 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
     }
     
     func deleteEntriesAtDay(day: Int){
-        let year = NSCalendar.currentCalendar().component(NSCalendarUnit.YearCalendarUnit, fromDate: calendar.currentMonth)
-        let month = NSCalendar.currentCalendar().component(NSCalendarUnit.MonthCalendarUnit, fromDate: calendar.currentMonth)
+        //Screw you iOS7 for forcing me to do this...
+        let components = NSCalendar.currentCalendar().components(NSCalendarUnit.YearCalendarUnit | NSCalendarUnit.MonthCalendarUnit, fromDate: self.calendar.currentMonth)
+        let year = components.year
+        let month = components.month
         
         let fetchRequest = NSFetchRequest(entityName: "MarkedDate")
         let fromDate = CalendarUtility.dateFromComponents(day, month: month, year: year)!
@@ -124,7 +127,8 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
         yellowBtn.selected = false
         redBtn.selected = false
         
-        let day = NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: date)
+        let components = NSCalendar.currentCalendar().components(NSCalendarUnit.DayCalendarUnit, fromDate: date)
+        let day = components.day
         
         if(dayIsMarked(day)){
             selectButtonFromMarkedDate(day)
@@ -150,8 +154,10 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
     }
     
     func markCalendarWithCoreData(){
-        let year = NSCalendar.currentCalendar().component(NSCalendarUnit.YearCalendarUnit, fromDate: calendar.currentMonth)
-        let month = NSCalendar.currentCalendar().component(NSCalendarUnit.MonthCalendarUnit, fromDate: calendar.currentMonth)
+        //Screw you iOS7 for forcing me to do this...
+        let components = NSCalendar.currentCalendar().components(NSCalendarUnit.YearCalendarUnit | NSCalendarUnit.MonthCalendarUnit, fromDate: self.calendar.currentMonth)
+        let year = components.year
+        let month = components.month
         
         fetchMarkedDaysForCurrentYearMonth(year, month: month)
         calendar.markDates(markedDays, withColors: markedColors)
@@ -186,9 +192,12 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
         yellowBtn.selected = false
         redBtn.selected = false
         
+
         if let selectedDate = calendar.selectedDate {
-            if(dayIsMarked(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))){
-                deleteEntriesAtDay(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))
+            let components = NSCalendar.currentCalendar().components(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate)
+            let day = components.day
+            if(dayIsMarked(day)){
+                deleteEntriesAtDay(day)
             }
             if(greenBtn.selected){
                 let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "green")
@@ -204,8 +213,10 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
         redBtn.selected = false
         
         if let selectedDate = calendar.selectedDate {
-            if(dayIsMarked(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))){
-                deleteEntriesAtDay(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))
+            let components = NSCalendar.currentCalendar().components(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate)
+            let day = components.day
+            if(dayIsMarked(day)){
+                deleteEntriesAtDay(day)
             }
             if(yellowBtn.selected){
                 let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "yellow")
@@ -221,8 +232,10 @@ class CalendarViewController: UIViewController, VRGCalendarViewDelegate {
         yellowBtn.selected = false
         
         if let selectedDate = calendar.selectedDate {
-            if(dayIsMarked(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))){
-                deleteEntriesAtDay(NSCalendar.currentCalendar().component(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate))
+            let components = NSCalendar.currentCalendar().components(NSCalendarUnit.DayCalendarUnit, fromDate: selectedDate)
+            let day = components.day
+            if(dayIsMarked(day)){
+                deleteEntriesAtDay(day)
             }
             if(redBtn.selected){
                 let newItem = MarkedDate.createInManagedObjectContext(self.managedObjectContext!, date: selectedDate, markedAs: "red")

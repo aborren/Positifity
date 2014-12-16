@@ -8,10 +8,13 @@
 
 import UIKit
 import HealthKit
+import iAd
 
-class UpdateWeightViewController: UIViewController {
+class UpdateWeightViewController: UIViewController, ADBannerViewDelegate {
 
     @IBOutlet var newWeightTextField: UITextField!
+    var adIsVisible = false
+    var ad: ADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,35 @@ class UpdateWeightViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        ad = ADBannerView(frame: CGRectMake(0, self.view.frame.size.height, self.view.frame.width, 50))
+        ad.delegate = self
+    }
+    
+    //Ads
+    func bannerViewDidLoadAd(banner: ADBannerView!) {
+        if(!adIsVisible){
+            if(ad.superview == nil){
+                self.view.addSubview(ad)
+            }
+            UIView.beginAnimations("ShowAdAnimation", context: nil)
+            ad.frame = CGRectOffset(ad.frame, 0, -ad.frame.size.height)
+            UIView.commitAnimations()
+            adIsVisible = true
+        }
+    }
+    
+    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+        println("failed to load AD")
+        if(adIsVisible){
+            UIView.beginAnimations("HideAdAnimation", context: nil)
+            ad.frame = CGRectOffset(ad.frame, 0, ad.frame.size.height)
+            UIView.commitAnimations()
+            adIsVisible = false
+        }
+    }
+    
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier=="saveWeightUpdate"){
@@ -32,7 +64,9 @@ class UpdateWeightViewController: UIViewController {
 
     func updateWeight(){
         if let weight = HelperFunctions.numberString(newWeightTextField.text){
-            saveWeightToHealthKit(weight)
+            if(HelperFunctions.isAboveIOSVersion("8.0")){
+                saveWeightToHealthKit(weight)
+            }
             NSUserDefaults.standardUserDefaults().setDouble(weight, forKey: "weight")
             NSUserDefaults.standardUserDefaults().synchronize()
         }
@@ -60,5 +94,9 @@ class UpdateWeightViewController: UIViewController {
                 println("An error occured\(error)")
             }
             })
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
 }

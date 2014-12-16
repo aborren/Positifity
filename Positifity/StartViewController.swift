@@ -13,7 +13,9 @@ class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        requestPermissions()
+        if(HelperFunctions.isAboveIOSVersion("8.0")){
+            requestPermissions()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,9 +25,7 @@ class StartViewController: UIViewController {
     func requestPermissions(){
         let dataTypesToWrite = [HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)]
         let dataTypesToRead = [
-            HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass),
-            HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMassIndex),
-            HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)
+            HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
         ]
         
         var appDel = UIApplication.sharedApplication().delegate as AppDelegate

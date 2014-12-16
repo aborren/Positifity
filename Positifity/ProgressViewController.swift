@@ -104,9 +104,9 @@ class ProgressViewController: UIViewController {
         else{
             goalPercentage = 100
         }
-        println("Start: \(startWeight) Current: \(currentWeight) Goal: \(goalWeight) WeightLoss=\(weightLoss)")
+        //println("Start: \(startWeight) Current: \(currentWeight) Goal: \(goalWeight) WeightLoss=\(weightLoss)")
         descriptionLabel.text = "Goal weight"
-        goalWeightLabel.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description
+        goalWeightLabel.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description + currentWeightUnitAbbrevation()
     }
     
     func setupAnimation(){

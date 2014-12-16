@@ -10,7 +10,6 @@
 		B2439C5F19F29E0800D33D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C5E19F29E0800D33D4C /* AppDelegate.swift */; };
 		B2439C6219F29E0800D33D4C /* Positifity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */; };
 		B2439C6419F29E0800D33D4C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C6319F29E0800D33D4C /* CalendarViewController.swift */; };
-		B2439C6719F29E0800D33D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6519F29E0800D33D4C /* Main.storyboard */; };
 		B2439C6919F29E0800D33D4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6819F29E0800D33D4C /* Images.xcassets */; };
 		B2439C6C19F29E0800D33D4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */; };
 		B2439C7819F29E0800D33D4C /* PositifityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C7719F29E0800D33D4C /* PositifityTests.swift */; };
@@ -30,7 +29,6 @@
 		B2BF2A7B19F6B2A400D23D66 /* UpdateWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */; };
 		B2C4848D19F556C700061FB8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4848C19F556C700061FB8 /* TabBarViewController.swift */; };
 		B2C4848F19F5588300061FB8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4848E19F5588300061FB8 /* StartViewController.swift */; };
-		B2C4849319F562C500061FB8 /* StartGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4849219F562C500061FB8 /* StartGoalViewController.swift */; };
 		B2C4849519F5693700061FB8 /* StartEnterCurrentDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4849419F5693700061FB8 /* StartEnterCurrentDataViewController.swift */; };
 		B2C6C09A19FFE3E000A336D0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C6C09919FFE3E000A336D0 /* NotificationCenter.framework */; };
 		B2C6C09F19FFE3E000A336D0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6C09E19FFE3E000A336D0 /* TodayViewController.swift */; };
@@ -53,6 +51,10 @@
 		B2C91FBF1A2637C000CA6D47 /* full_moon-25.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C91FBD1A2637C000CA6D47 /* full_moon-25.png */; };
 		B2C992891A3873EC0078E4EE /* Yuanti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = B2C992881A3873EC0078E4EE /* Yuanti.ttc */; };
 		B2C9928A1A3873EC0078E4EE /* Yuanti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = B2C992881A3873EC0078E4EE /* Yuanti.ttc */; };
+		B2CB45471A404923005190D7 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB45461A404923005190D7 /* calendar.png */; };
+		B2CB45491A404945005190D7 /* progress.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB45481A404945005190D7 /* progress.png */; };
+		B2CB45811A405E81005190D7 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB45801A405E81005190D7 /* InitialViewController.swift */; };
+		B2CB45841A405FE5005190D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2CB45821A405FE5005190D7 /* Main.storyboard */; };
 		B2CC1D9E1A14FD4B001D3902 /* Positifity.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */; };
 		B2CC1DA01A1503CC001D3902 /* MarkedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9019F2ACCD00D33D4C /* MarkedDate.swift */; };
 		B2CC1DA41A150A83001D3902 /* dot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CC1DA11A150A83001D3902 /* dot_yellow.png */; };
@@ -62,6 +64,7 @@
 		B2CC1DA81A150A83001D3902 /* dot_green.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CC1DA31A150A83001D3902 /* dot_green.png */; };
 		B2CC1DA91A150A83001D3902 /* dot_green.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CC1DA31A150A83001D3902 /* dot_green.png */; };
 		B2CF59141A09138F00BB7C5B /* posi_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CF59131A09138F00BB7C5B /* posi_logo.png */; };
+		B2D592441A40865100533A15 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D592431A40865100533A15 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +104,6 @@
 		B2439C5E19F29E0800D33D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2439C6119F29E0800D33D4C /* Positifity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Positifity.xcdatamodel; sourceTree = "<group>"; };
 		B2439C6319F29E0800D33D4C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		B2439C6619F29E0800D33D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2439C6819F29E0800D33D4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B2439C6B19F29E0800D33D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B2439C7119F29E0800D33D4C /* PositifityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PositifityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +133,6 @@
 		B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateWeightViewController.swift; sourceTree = "<group>"; };
 		B2C4848C19F556C700061FB8 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ../../beta5fixCoreData/TabBarViewController.swift; sourceTree = "<group>"; };
 		B2C4848E19F5588300061FB8 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		B2C4849219F562C500061FB8 /* StartGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGoalViewController.swift; sourceTree = "<group>"; };
 		B2C4849419F5693700061FB8 /* StartEnterCurrentDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartEnterCurrentDataViewController.swift; sourceTree = "<group>"; };
 		B2C6C09719FFE3E000A336D0 /* PositifityWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PositifityWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C6C09919FFE3E000A336D0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -149,10 +150,15 @@
 		B2C91FBC1A2637C000CA6D47 /* full_moon-25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "full_moon-25@2x.png"; sourceTree = "<group>"; };
 		B2C91FBD1A2637C000CA6D47 /* full_moon-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "full_moon-25.png"; sourceTree = "<group>"; };
 		B2C992881A3873EC0078E4EE /* Yuanti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuanti.ttc; sourceTree = "<group>"; };
+		B2CB45461A404923005190D7 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		B2CB45481A404945005190D7 /* progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress.png; sourceTree = "<group>"; };
+		B2CB45801A405E81005190D7 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		B2CB45831A405FE5005190D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2CC1DA11A150A83001D3902 /* dot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot_yellow.png; path = ../dot_yellow.png; sourceTree = "<group>"; };
 		B2CC1DA21A150A83001D3902 /* dot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot_red.png; path = ../dot_red.png; sourceTree = "<group>"; };
 		B2CC1DA31A150A83001D3902 /* dot_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_green.png; sourceTree = SOURCE_ROOT; };
 		B2CF59131A09138F00BB7C5B /* posi_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = posi_logo.png; sourceTree = "<group>"; };
+		B2D592431A40865100533A15 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D592441A40865100533A15 /* iAd.framework in Frameworks */,
 				B268583719F3E4AB006AEF8D /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +224,8 @@
 				B2C91FBD1A2637C000CA6D47 /* full_moon-25.png */,
 				B2C8F9701A39CCDD00AFEA3C /* posicircle.png */,
 				B2CF59131A09138F00BB7C5B /* posi_logo.png */,
+				B2CB45461A404923005190D7 /* calendar.png */,
+				B2CB45481A404945005190D7 /* progress.png */,
 				B268583519F3E4AB006AEF8D /* Positifity.entitlements */,
 				B2439CA819F2E86700D33D4C /* circlecontrol */,
 				B2439C9619F2C09400D33D4C /* calendar */,
@@ -225,8 +234,8 @@
 				B2C91FAE1A25E5F700CA6D47 /* HelperFunctions.swift */,
 				B2439C9419F2B8E600D33D4C /* CalendarUtility.swift */,
 				B2C91FB01A25FFBF00CA6D47 /* CoreDataStack.swift */,
+				B2CB45821A405FE5005190D7 /* Main.storyboard */,
 				B2439C9219F2B81600D33D4C /* ViewControllers */,
-				B2439C6519F29E0800D33D4C /* Main.storyboard */,
 				B2439C6819F29E0800D33D4C /* Images.xcassets */,
 				B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */,
 				B2439C6019F29E0800D33D4C /* Positifity.xcdatamodeld */,
@@ -270,8 +279,8 @@
 				B2C4848C19F556C700061FB8 /* TabBarViewController.swift */,
 				B2BF2A7819F6AD1B00D23D66 /* SettingsViewController.swift */,
 				B2C4849419F5693700061FB8 /* StartEnterCurrentDataViewController.swift */,
-				B2C4849219F562C500061FB8 /* StartGoalViewController.swift */,
 				B2C4848E19F5588300061FB8 /* StartViewController.swift */,
+				B2CB45801A405E81005190D7 /* InitialViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +316,7 @@
 		B2C6C09819FFE3E000A336D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2D592431A40865100533A15 /* iAd.framework */,
 				B2C6C09919FFE3E000A336D0 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -454,15 +464,17 @@
 				B2C8F9741A39EADB00AFEA3C /* gray_dot.png in Resources */,
 				B2CF59141A09138F00BB7C5B /* posi_logo.png in Resources */,
 				B2CC1DA41A150A83001D3902 /* dot_yellow.png in Resources */,
+				B2CB45491A404945005190D7 /* progress.png in Resources */,
 				B2C91FBB1A26370B00CA6D47 /* month_view-25.png in Resources */,
-				B2439C6719F29E0800D33D4C /* Main.storyboard in Resources */,
 				B2CC1DA61A150A83001D3902 /* dot_red.png in Resources */,
 				B2C8F9711A39CCDD00AFEA3C /* posicircle.png in Resources */,
 				B2C91FBF1A2637C000CA6D47 /* full_moon-25.png in Resources */,
 				B2439C6C19F29E0800D33D4C /* LaunchScreen.xib in Resources */,
 				B2C91FBA1A26370B00CA6D47 /* month_view-25@2x.png in Resources */,
 				B2C91FBE1A2637C000CA6D47 /* full_moon-25@2x.png in Resources */,
+				B2CB45841A405FE5005190D7 /* Main.storyboard in Resources */,
 				B2C992891A3873EC0078E4EE /* Yuanti.ttc in Resources */,
+				B2CB45471A404923005190D7 /* calendar.png in Resources */,
 				B2439C6919F29E0800D33D4C /* Images.xcassets in Resources */,
 				B2CC1DA81A150A83001D3902 /* dot_green.png in Resources */,
 			);
@@ -510,12 +522,12 @@
 				B2439CAE19F2E88D00D33D4C /* SAMath.m in Sources */,
 				B2C4849519F5693700061FB8 /* StartEnterCurrentDataViewController.swift in Sources */,
 				B2439CA719F2E3CA00D33D4C /* ProgressViewController.swift in Sources */,
-				B2C4849319F562C500061FB8 /* StartGoalViewController.swift in Sources */,
 				B2439C6419F29E0800D33D4C /* CalendarViewController.swift in Sources */,
 				B2439C9519F2B8E600D33D4C /* CalendarUtility.swift in Sources */,
 				B2439C5F19F29E0800D33D4C /* AppDelegate.swift in Sources */,
 				B2C8F9771A39F0B300AFEA3C /* Quotes.swift in Sources */,
 				B2439C6219F29E0800D33D4C /* Positifity.xcdatamodeld in Sources */,
+				B2CB45811A405E81005190D7 /* InitialViewController.swift in Sources */,
 				B2439CA219F2C0A600D33D4C /* UIView+convenience.m in Sources */,
 				B2439C9119F2ACCD00D33D4C /* MarkedDate.swift in Sources */,
 				B2439CA419F2C0A600D33D4C /* NSDate+convenience.m in Sources */,
@@ -560,20 +572,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B2439C6519F29E0800D33D4C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2439C6619F29E0800D33D4C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2439C6A19F29E0800D33D4C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B2439C6B19F29E0800D33D4C /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		B2CB45821A405FE5005190D7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2CB45831A405FE5005190D7 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -11,14 +11,14 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet var newGoalTextField: UITextField!
-    @IBOutlet var heightTextField: UITextField!
+    //@IBOutlet var heightTextField: UITextField!
     @IBOutlet var weightTextField: UITextField!
     @IBOutlet var weightUnitSegmentedControl: UISegmentedControl!
-    @IBOutlet var heightUnitSegmentedControl: UISegmentedControl!
+    //@IBOutlet var heightUnitSegmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadValues()
+        //loadValues()
         // Do any additional setup after loading the view.
     }
 
@@ -28,10 +28,7 @@ class SettingsViewController: UIViewController {
     }
     
     func loadValues(){
-        newGoalTextField.text = NSUserDefaults.standardUserDefaults().doubleForKey("goal").description
-        heightTextField.text = NSUserDefaults.standardUserDefaults().doubleForKey("height").description
-        weightTextField.text = NSUserDefaults.standardUserDefaults().doubleForKey("startWeight").description
-        
+
         if let weightUnit = NSUserDefaults.standardUserDefaults().stringForKey("weightUnit"){
             if(weightUnit == "Pounds"){
                 weightUnitSegmentedControl.selectedSegmentIndex = 2
@@ -42,7 +39,7 @@ class SettingsViewController: UIViewController {
             }
         }
         
-        if let heightUnit = NSUserDefaults.standardUserDefaults().stringForKey("heightUnit"){
+       /* if let heightUnit = NSUserDefaults.standardUserDefaults().stringForKey("heightUnit"){
             if(heightUnit == "Feet"){
                 heightUnitSegmentedControl.selectedSegmentIndex = 2
             }else if(heightUnit == "Inches"){
@@ -50,23 +47,24 @@ class SettingsViewController: UIViewController {
             }else{
                 heightUnitSegmentedControl.selectedSegmentIndex = 0
             }
-        }
+        }*/
     }
     
     func saveValues(){
         if let goal = HelperFunctions.numberString(newGoalTextField.text){
             NSUserDefaults.standardUserDefaults().setDouble(goal, forKey: "goal")
         }
-        if let height = HelperFunctions.numberString(heightTextField.text){
+        /*if let height = HelperFunctions.numberString(heightTextField.text){
             NSUserDefaults.standardUserDefaults().setDouble(height, forKey: "height")
-        }
+        }*/
         if let startWeight = HelperFunctions.numberString(weightTextField.text){
             NSUserDefaults.standardUserDefaults().setDouble(startWeight, forKey: "startWeight")
+            NSUserDefaults.standardUserDefaults().setDouble(startWeight, forKey: "weight")
         }
 
         NSUserDefaults.standardUserDefaults().setValue(weightUnitSegmentedControl.titleForSegmentAtIndex(weightUnitSegmentedControl.selectedSegmentIndex), forKey: "weightUnit")
         
-        NSUserDefaults.standardUserDefaults().setObject(heightUnitSegmentedControl.titleForSegmentAtIndex(heightUnitSegmentedControl.selectedSegmentIndex), forKey: "heightUnit")
+       /* NSUserDefaults.standardUserDefaults().setObject(heightUnitSegmentedControl.titleForSegmentAtIndex(heightUnitSegmentedControl.selectedSegmentIndex), forKey: "heightUnit")*/
         
         NSUserDefaults.standardUserDefaults().synchronize()
     }

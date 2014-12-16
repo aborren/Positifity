@@ -14,7 +14,8 @@ import HealthKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var healthStore: HKHealthStore = HKHealthStore()
+    
+    lazy var healthStore: HKHealthStore = HKHealthStore()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

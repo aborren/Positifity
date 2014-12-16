@@ -18,7 +18,7 @@
 
 #pragma mark - Select Date
 -(void)selectDate:(int)date {
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *comps = [gregorian components:NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay fromDate:self.currentMonth];
     [comps setDay:date];
     self.selectedDate = [gregorian dateFromComponents:comps];
@@ -70,7 +70,7 @@
 #pragma mark - Set date to now
 -(void)reset {
     NSCalendar *gregorian = [[NSCalendar alloc]
-                             initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+                             initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *components =
     [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth |
                            NSCalendarUnitDay) fromDate: [NSDate date]];

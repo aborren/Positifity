@@ -19,5 +19,12 @@ class HelperFunctions {
         }*/
         return formatter.numberFromString(input) as Double?
     }
-    
+ 
+    class func isAboveIOSVersion(version: String)->Bool{
+        let deviceVersion = UIDevice.currentDevice().systemVersion
+        if(deviceVersion.compare(version, options: NSStringCompareOptions.NumericSearch, range: nil, locale: nil) != NSComparisonResult.OrderedAscending){
+            return true
+        }
+        return false
+    }
 }

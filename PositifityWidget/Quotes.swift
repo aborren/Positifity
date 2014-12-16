@@ -20,7 +20,13 @@ class Quotes{
             "Nothing great was ever achieved without enthusiasm.",
             "Insanity: doing the same thing over and over again and expecting different results.",
             "Ability is what you're capable of doing. Motivation determines what you do. Attitude determines how well you do it.",
-            "Motivation is what gets you started. Habit is what keeps you going."
+            "Motivation is what gets you started. Habit is what keeps you going.",
+            "The finish line is just the beginning of a whole new race.",
+            "In seeking happiness for others, you find it for yourself.",
+            "The secret of getting ahead is getting started.",
+            "It's not who you are that holds you back, it’s who you think you’re not.",
+            "It's never too late to become what you might have been.",
+            "Clear your mind of can’t."
         ]
         
         var x = UInt32(quotes.count)

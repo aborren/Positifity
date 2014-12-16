@@ -13,14 +13,17 @@ class StartEnterCurrentDataViewController: UIViewController {
 
     @IBOutlet var weightTextView: UITextField!
     @IBOutlet var weightUnitSegmentedControl: UISegmentedControl!
+    @IBOutlet var goalWeightTextView: UITextField!
     
-    @IBOutlet var heightTextView: UITextField!
-    @IBOutlet var heightUnitSegmentedControl: UISegmentedControl!
+    /*@IBOutlet var heightTextView: UITextField!
+    @IBOutlet var heightUnitSegmentedControl: UISegmentedControl!*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.perfromQueryForWeightSamples()
-        self.perfromQueryForHeightSamples()
+        if(HelperFunctions.isAboveIOSVersion("8.0")){
+            self.perfromQueryForWeightSamples()
+        }
+        //self.perfromQueryForHeightSamples()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +54,7 @@ class StartEnterCurrentDataViewController: UIViewController {
         appDel.healthStore.executeQuery(query)
     }
     
-    func perfromQueryForHeightSamples() {
+    /*func perfromQueryForHeightSamples() {
         let heightSampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)
         let sortDesc: NSSortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
         
@@ -73,7 +76,7 @@ class StartEnterCurrentDataViewController: UIViewController {
         })
         let appDel = UIApplication.sharedApplication().delegate as AppDelegate
         appDel.healthStore.executeQuery(query)
-    }
+    }*/
 
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
@@ -93,13 +96,20 @@ class StartEnterCurrentDataViewController: UIViewController {
             //inte gå nästa steg
         }
         
-        if let height = HelperFunctions.numberString(heightTextView.text){
+        if let goalWeight = HelperFunctions.numberString(goalWeightTextView.text){
+            println(goalWeight)
+            NSUserDefaults.standardUserDefaults().setDouble(goalWeight, forKey: "goal")
+        }else{
+            return false
+        }
+        
+        /*if let height = HelperFunctions.numberString(heightTextView.text){
             NSUserDefaults.standardUserDefaults().setDouble(height, forKey: "height")
             NSUserDefaults.standardUserDefaults().setObject(heightUnitSegmentedControl.titleForSegmentAtIndex(heightUnitSegmentedControl.selectedSegmentIndex), forKey: "heightUnit")
         }else{
             return false
             //inte gå nästa steg
-        }
+        }*/
         
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isSetup")
         NSUserDefaults.standardUserDefaults().synchronize()
