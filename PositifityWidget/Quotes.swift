@@ -26,7 +26,15 @@ class Quotes{
             "The secret of getting ahead is getting started.",
             "It's not who you are that holds you back, it’s who you think you’re not.",
             "It's never too late to become what you might have been.",
-            "Clear your mind of can’t."
+            "Clear your mind of can’t.",
+            "Once you replace negative thoughts with positive ones, you'll start having positive results.",
+            "Yesterday is not ours to recover, but tomorrow is ours to win or lose.",
+            "Believe that life is worth living and your belief will help create the fact.",
+            "You cannot have a positive life and a negative mind.",
+            "People often say that motivation doesn't last. Well, neither does bathing - that's why we recommend it daily.",
+            "Physical fitness is not only one of the most important keys to a healthy body, it is the basis of dynamic and creative intellectual activity.",
+            "Take care of your body. It's the only place you have to live.",
+            "True enjoyment comes from activity of the mind and exercise of the body; the two are ever united."
         ]
         
         var x = UInt32(quotes.count)

@@ -46,7 +46,7 @@ class StartEnterCurrentDataViewController: UIViewController {
                         let hk: HKQuantitySample = s as HKQuantitySample
                         //println(hk.description)
                         let weight: Double = hk.quantity.doubleValueForUnit(HKUnit(fromString: "kg"))
-                        self.weightTextView.text = weight.description
+                        self.weightTextView.text = NSNumberFormatter.localizedStringFromNumber(weight, numberStyle: NSNumberFormatterStyle.DecimalStyle)
                     }
                 }
         })
@@ -86,6 +86,7 @@ class StartEnterCurrentDataViewController: UIViewController {
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject?) -> Bool {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        println(HelperFunctions.numberString("90.0"))
         if let weight = HelperFunctions.numberString(weightTextView.text){
             NSUserDefaults.standardUserDefaults().setDouble(weight, forKey: "startWeight")
             NSUserDefaults.standardUserDefaults().setDouble(weight, forKey: "weight")
