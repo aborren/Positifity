@@ -75,6 +75,8 @@ class SettingsViewController: UIViewController {
             saveValues()
         }
     }
-    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
 
 }

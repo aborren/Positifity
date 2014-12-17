@@ -25,6 +25,9 @@
 		B2439CAE19F2E88D00D33D4C /* SAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B2439CAC19F2E88D00D33D4C /* SAMath.m */; };
 		B24916D01A1A596300E11D68 /* CalendarUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2439C9419F2B8E600D33D4C /* CalendarUtility.swift */; };
 		B268583719F3E4AB006AEF8D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B268583619F3E4AB006AEF8D /* HealthKit.framework */; };
+		B2B0857D1A419CF900BDA58D /* StartPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B0857C1A419CF900BDA58D /* StartPageContentViewController.swift */; };
+		B2B0857F1A419DC300BDA58D /* StartPageDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B0857E1A419DC300BDA58D /* StartPageDefaultViewController.swift */; };
+		B2B085811A41C28D00BDA58D /* widget.png in Resources */ = {isa = PBXBuildFile; fileRef = B2B085801A41C28D00BDA58D /* widget.png */; };
 		B2BF2A7919F6AD1B00D23D66 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2A7819F6AD1B00D23D66 /* SettingsViewController.swift */; };
 		B2BF2A7B19F6B2A400D23D66 /* UpdateWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */; };
 		B2C4848D19F556C700061FB8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4848C19F556C700061FB8 /* TabBarViewController.swift */; };
@@ -129,6 +132,9 @@
 		B2439CAC19F2E88D00D33D4C /* SAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMath.m; sourceTree = "<group>"; };
 		B268583519F3E4AB006AEF8D /* Positifity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Positifity.entitlements; sourceTree = "<group>"; };
 		B268583619F3E4AB006AEF8D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		B2B0857C1A419CF900BDA58D /* StartPageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageContentViewController.swift; sourceTree = "<group>"; };
+		B2B0857E1A419DC300BDA58D /* StartPageDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageDefaultViewController.swift; sourceTree = "<group>"; };
+		B2B085801A41C28D00BDA58D /* widget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = widget.png; path = ../../../../Desktop/widget.png; sourceTree = "<group>"; };
 		B2BF2A7819F6AD1B00D23D66 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateWeightViewController.swift; sourceTree = "<group>"; };
 		B2C4848C19F556C700061FB8 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ../../beta5fixCoreData/TabBarViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +231,7 @@
 				B2C8F9701A39CCDD00AFEA3C /* posicircle.png */,
 				B2CF59131A09138F00BB7C5B /* posi_logo.png */,
 				B2CB45461A404923005190D7 /* calendar.png */,
+				B2B085801A41C28D00BDA58D /* widget.png */,
 				B2CB45481A404945005190D7 /* progress.png */,
 				B268583519F3E4AB006AEF8D /* Positifity.entitlements */,
 				B2439CA819F2E86700D33D4C /* circlecontrol */,
@@ -275,6 +282,8 @@
 			children = (
 				B2439C6319F29E0800D33D4C /* CalendarViewController.swift */,
 				B2439CA619F2E3CA00D33D4C /* ProgressViewController.swift */,
+				B2B0857E1A419DC300BDA58D /* StartPageDefaultViewController.swift */,
+				B2B0857C1A419CF900BDA58D /* StartPageContentViewController.swift */,
 				B2BF2A7A19F6B2A400D23D66 /* UpdateWeightViewController.swift */,
 				B2C4848C19F556C700061FB8 /* TabBarViewController.swift */,
 				B2BF2A7819F6AD1B00D23D66 /* SettingsViewController.swift */,
@@ -477,6 +486,7 @@
 				B2CB45471A404923005190D7 /* calendar.png in Resources */,
 				B2439C6919F29E0800D33D4C /* Images.xcassets in Resources */,
 				B2CC1DA81A150A83001D3902 /* dot_green.png in Resources */,
+				B2B085811A41C28D00BDA58D /* widget.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,9 +522,11 @@
 			files = (
 				B2BF2A7B19F6B2A400D23D66 /* UpdateWeightViewController.swift in Sources */,
 				B2439CA519F2C0A600D33D4C /* UIColor+expanded.m in Sources */,
+				B2B0857D1A419CF900BDA58D /* StartPageContentViewController.swift in Sources */,
 				B2439CAD19F2E88D00D33D4C /* SAMultisectorControl.m in Sources */,
 				B2439CA119F2C0A600D33D4C /* VRGCalendarView.m in Sources */,
 				B2C91FB11A25FFBF00CA6D47 /* CoreDataStack.swift in Sources */,
+				B2B0857F1A419DC300BDA58D /* StartPageDefaultViewController.swift in Sources */,
 				B2439CA319F2C0A600D33D4C /* NSMutableArray+convenience.m in Sources */,
 				B2C91FAF1A25E5F700CA6D47 /* HelperFunctions.swift in Sources */,
 				B2C4848D19F556C700061FB8 /* TabBarViewController.swift in Sources */,

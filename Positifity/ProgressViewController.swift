@@ -46,7 +46,7 @@ class ProgressViewController: UIViewController {
         //if losing weight or gaining or none
         weightLoss = startWeight - goalWeight
         
-        self.circle.addTarget(self, action: "multisectorValueChanged", forControlEvents: UIControlEvents.ValueChanged)
+        //self.circle.addTarget(self, action: "multisectorValueChanged", forControlEvents: UIControlEvents.ValueChanged)
         self.circle.userInteractionEnabled = false
         
         var sector : SAMultisectorSector
@@ -71,17 +71,16 @@ class ProgressViewController: UIViewController {
             sector.startValue = startWeight
         }
 
-        self.circle.addSector(sector)
-        
+        self.circle.addSector(sector)        
     }
     
-    func multisectorValueChanged(){
+   /* func multisectorValueChanged(){
         self.updateDataView()
     }
     
     func updateDataView(){
         
-    }
+    }*/
 
     func loadWeightText(){
        goalWeight = NSUserDefaults.standardUserDefaults().doubleForKey("goal")

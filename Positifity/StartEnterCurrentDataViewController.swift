@@ -92,6 +92,7 @@ class StartEnterCurrentDataViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().setValue(weightUnitSegmentedControl.titleForSegmentAtIndex(weightUnitSegmentedControl.selectedSegmentIndex), forKey: "weightUnit")
 
         }else{
+            alertForMissingArguments()
             return false
             //inte gå nästa steg
         }
@@ -100,6 +101,7 @@ class StartEnterCurrentDataViewController: UIViewController {
             println(goalWeight)
             NSUserDefaults.standardUserDefaults().setDouble(goalWeight, forKey: "goal")
         }else{
+            alertForMissingArguments()
             return false
         }
         
@@ -114,5 +116,10 @@ class StartEnterCurrentDataViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isSetup")
         NSUserDefaults.standardUserDefaults().synchronize()
         return true
+    }
+    
+    func alertForMissingArguments(){
+        let alert: UIAlertView = UIAlertView(title: "Missing data", message: "Please fill in your current weight, goal weight and select your preferred weight unit to continue.", delegate: nil, cancelButtonTitle: "Cancel")
+        alert.show()
     }
 }

@@ -19,6 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let pageControl: UIPageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor(hexString: "009dd0")
+        pageControl.backgroundColor = UIColor.whiteColor()
+        
+        let attributes = [NSFontAttributeName:UIFont(name: "Yuanti SC", size: 15.0)!]
+        let segmentedControl: UISegmentedControl = UISegmentedControl.appearance()
+        segmentedControl.setTitleTextAttributes(attributes, forState: UIControlState.Normal)
+        
         return true
     }
 
