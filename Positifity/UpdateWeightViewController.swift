@@ -73,6 +73,9 @@ class UpdateWeightViewController: UIViewController, ADBannerViewDelegate {
     }
     
     func saveWeightToHealthKit(weight: Double){
+        if(!HKHealthStore.isHealthDataAvailable()){
+            return
+        }
         //Check unit type. Default Kilograms, but change if set to Pounds or Stones
         var unitType = HKUnit.gramUnitWithMetricPrefix(HKMetricPrefix.Kilo)
         if let weightUnit = NSUserDefaults.standardUserDefaults().stringForKey("weightUnit"){

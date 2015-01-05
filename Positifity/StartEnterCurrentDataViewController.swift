@@ -31,6 +31,9 @@ class StartEnterCurrentDataViewController: UIViewController {
     }
     
     func perfromQueryForWeightSamples() {
+        if(!HKHealthStore.isHealthDataAvailable()){
+            return
+        }
         let weightSampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
         let sortDesc: NSSortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
         

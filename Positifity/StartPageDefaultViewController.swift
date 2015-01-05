@@ -103,6 +103,10 @@ class StartPageDefaultViewController: UIViewController, UIPageViewControllerData
     }
     */
     func requestPermissions(){
+        //leave if healthkit not available
+        if(!HKHealthStore.isHealthDataAvailable()){
+            return
+        }
         let dataTypesToWrite = [HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)]
         let dataTypesToRead = [
             HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)

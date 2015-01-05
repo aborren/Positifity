@@ -148,6 +148,14 @@ class ProgressViewController: UIViewController {
         loadWeightText()
     }
     
+    @IBAction func updateOrSetting(sender: AnyObject) {
+        if(weightLoss == 0){
+            performSegueWithIdentifier("settings", sender: sender)
+        }else{
+            performSegueWithIdentifier("update", sender: sender)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

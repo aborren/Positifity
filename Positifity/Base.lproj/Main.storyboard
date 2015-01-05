@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5o3-lE-N61">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5o3-lE-N61">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -27,8 +27,8 @@
             <string>STYuanti-SC-Regular</string>
             <string>STYuanti-SC-Light</string>
             <string>STYuanti-SC-Light</string>
-            <string>STYuanti-SC-Light</string>
             <string>STYuanti-SC-Regular</string>
+            <string>STYuanti-SC-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -364,7 +364,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="RBN-6d-cPm" kind="show" id="aTJ-64-Gfw"/>
+                                    <action selector="updateOrSetting:" destination="qEm-G4-MtF" eventType="touchUpInside" id="fEu-fN-w9v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -416,6 +416,8 @@
                         <outlet property="circle" destination="eu6-tr-Bh1" id="h0j-23-acL"/>
                         <outlet property="descriptionLabel" destination="SjR-lP-zem" id="ZxR-NJ-zwG"/>
                         <outlet property="goalWeightLabel" destination="v3Q-xX-wVa" id="mWx-LQ-k2x"/>
+                        <segue destination="lnD-uZ-uzV" kind="show" identifier="settings" id="eRI-B4-65h"/>
+                        <segue destination="RBN-6d-cPm" kind="show" identifier="update" id="hRj-aN-HxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEq-Ho-zSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1035,6 +1037,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ko9-xO-2Ln"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KBw-7G-l5B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ay-lr-hoq">
@@ -1075,9 +1078,9 @@
                                 <exclude reference="9ay-lr-hoq"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Kp3-dK-y5P"/>
                                 <exclude reference="M2Z-Br-cPc"/>
                                 <exclude reference="gID-9g-oT7"/>
-                                <exclude reference="Kp3-dK-y5P"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1085,9 +1088,9 @@
                                 <include reference="9ay-lr-hoq"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Kp3-dK-y5P"/>
                                 <include reference="M2Z-Br-cPc"/>
                                 <include reference="gID-9g-oT7"/>
-                                <include reference="Kp3-dK-y5P"/>
                             </mask>
                         </variation>
                     </view>
@@ -1116,6 +1119,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qR9-L2-PSW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kCI-Pl-QWb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="WWs-Sf-lVW">
@@ -1174,8 +1178,8 @@
                                 <exclude reference="7oF-c6-twK"/>
                                 <exclude reference="BEl-yv-8Cq"/>
                                 <exclude reference="zgO-oh-hrH"/>
-                                <exclude reference="cxM-Dp-6BL"/>
                                 <exclude reference="LEp-LR-Dgy"/>
+                                <exclude reference="cxM-Dp-6BL"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1187,8 +1191,8 @@
                                 <include reference="7oF-c6-twK"/>
                                 <include reference="BEl-yv-8Cq"/>
                                 <include reference="zgO-oh-hrH"/>
-                                <include reference="cxM-Dp-6BL"/>
                                 <include reference="LEp-LR-Dgy"/>
+                                <include reference="cxM-Dp-6BL"/>
                             </mask>
                         </variation>
                     </view>
@@ -1227,4 +1231,7 @@
     <resources>
         <image name="posicircle.png" width="670" height="670"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eRI-B4-65h"/>
+    </inferredMetricsTieBreakers>
 </document>
